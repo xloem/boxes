@@ -1,0 +1,2027 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>All Box Generators &#8212; boxes.py 0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/nature.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Examples" href="api_examples.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="api_examples.html" title="Examples"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">boxes.py 0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">All Box Generators</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="all-box-generators">
+<h1>All Box Generators<a class="headerlink" href="#all-box-generators" title="Permalink to this heading">¶</a></h1>
+<p>Generators are organized in several Groups</p>
+<nav class="contents local" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#box" id="id2">Box</a></p>
+<ul>
+<li><p><a class="reference internal" href="#abox" id="id3">ABox</a></p></li>
+<li><p><a class="reference internal" href="#angledbox" id="id4">AngledBox</a></p></li>
+<li><p><a class="reference internal" href="#basedbox" id="id5">BasedBox</a></p></li>
+<li><p><a class="reference internal" href="#bayonetbox" id="id6">BayonetBox</a></p></li>
+<li><p><a class="reference internal" href="#cardbox" id="id7">CardBox</a></p></li>
+<li><p><a class="reference internal" href="#closedbox" id="id8">ClosedBox</a></p></li>
+<li><p><a class="reference internal" href="#console" id="id9">Console</a></p></li>
+<li><p><a class="reference internal" href="#console2" id="id10">Console2</a></p></li>
+<li><p><a class="reference internal" href="#dicebox" id="id11">DiceBox</a></p></li>
+<li><p><a class="reference internal" href="#displaycase" id="id12">DisplayCase</a></p></li>
+<li><p><a class="reference internal" href="#electronicsbox" id="id13">ElectronicsBox</a></p></li>
+<li><p><a class="reference internal" href="#eurorackskiff" id="id14">EuroRackSkiff</a></p></li>
+<li><p><a class="reference internal" href="#halfbox" id="id15">HalfBox</a></p></li>
+<li><p><a class="reference internal" href="#hingebox" id="id16">HingeBox</a></p></li>
+<li><p><a class="reference internal" href="#integratedhingebox" id="id17">IntegratedHingeBox</a></p></li>
+<li><p><a class="reference internal" href="#keypad" id="id18">Keypad</a></p></li>
+<li><p><a class="reference internal" href="#notesholder" id="id19">NotesHolder</a></p></li>
+<li><p><a class="reference internal" href="#openbox" id="id20">OpenBox</a></p></li>
+<li><p><a class="reference internal" href="#rack10box" id="id21">Rack10Box</a></p></li>
+<li><p><a class="reference internal" href="#rack19box" id="id22">Rack19Box</a></p></li>
+<li><p><a class="reference internal" href="#rack19halfwidth" id="id23">Rack19HalfWidth</a></p></li>
+<li><p><a class="reference internal" href="#rackbox" id="id24">RackBox</a></p></li>
+<li><p><a class="reference internal" href="#regularbox" id="id25">RegularBox</a></p></li>
+<li><p><a class="reference internal" href="#regularstarbox" id="id26">RegularStarBox</a></p></li>
+<li><p><a class="reference internal" href="#sidedoorhousing" id="id27">SideDoorHousing</a></p></li>
+<li><p><a class="reference internal" href="#slidingdrawer" id="id28">SlidingDrawer</a></p></li>
+<li><p><a class="reference internal" href="#twopiece" id="id29">TwoPiece</a></p></li>
+<li><p><a class="reference internal" href="#unevenheightbox" id="id30">UnevenHeightBox</a></p></li>
+<li><p><a class="reference internal" href="#universalbox" id="id31">UniversalBox</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#flexbox" id="id32">FlexBox</a></p>
+<ul>
+<li><p><a class="reference internal" href="#doubleflexdoorbox" id="id33">DoubleFlexDoorBox</a></p></li>
+<li><p><a class="reference internal" href="#id1" id="id34">FlexBox</a></p></li>
+<li><p><a class="reference internal" href="#flexbox2" id="id35">FlexBox2</a></p></li>
+<li><p><a class="reference internal" href="#flexbox3" id="id36">FlexBox3</a></p></li>
+<li><p><a class="reference internal" href="#flexbox4" id="id37">FlexBox4</a></p></li>
+<li><p><a class="reference internal" href="#flexbox5" id="id38">FlexBox5</a></p></li>
+<li><p><a class="reference internal" href="#heartbox" id="id39">HeartBox</a></p></li>
+<li><p><a class="reference internal" href="#roundedbox" id="id40">RoundedBox</a></p></li>
+<li><p><a class="reference internal" href="#shutterbox" id="id41">ShutterBox</a></p></li>
+<li><p><a class="reference internal" href="#ubox" id="id42">UBox</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#tray" id="id43">Tray</a></p>
+<ul>
+<li><p><a class="reference internal" href="#dividertray" id="id44">DividerTray</a></p></li>
+<li><p><a class="reference internal" href="#drillbox" id="id45">DrillBox</a></p></li>
+<li><p><a class="reference internal" href="#trayinsert" id="id46">TrayInsert</a></p></li>
+<li><p><a class="reference internal" href="#traylayout" id="id47">TrayLayout</a></p></li>
+<li><p><a class="reference internal" href="#traylayout2" id="id48">TrayLayout2</a></p></li>
+<li><p><a class="reference internal" href="#typetray" id="id49">TypeTray</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#shelf" id="id50">Shelf</a></p>
+<ul>
+<li><p><a class="reference internal" href="#bintray" id="id51">BinTray</a></p></li>
+<li><p><a class="reference internal" href="#cardholder" id="id52">CardHolder</a></p></li>
+<li><p><a class="reference internal" href="#discrack" id="id53">DiscRack</a></p></li>
+<li><p><a class="reference internal" href="#displayshelf" id="id54">DisplayShelf</a></p></li>
+<li><p><a class="reference internal" href="#paintstorage" id="id55">PaintStorage</a></p></li>
+<li><p><a class="reference internal" href="#sbcmicrorack" id="id56">SBCMicroRack</a></p></li>
+<li><p><a class="reference internal" href="#spicesrack" id="id57">SpicesRack</a></p></li>
+<li><p><a class="reference internal" href="#storagerack" id="id58">StorageRack</a></p></li>
+<li><p><a class="reference internal" href="#storageshelf" id="id59">StorageShelf</a></p></li>
+<li><p><a class="reference internal" href="#winerack" id="id60">WineRack</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#wallmounted" id="id61">WallMounted</a></p>
+<ul>
+<li><p><a class="reference internal" href="#dinrailbox" id="id62">DinRailBox</a></p></li>
+<li><p><a class="reference internal" href="#wallcaliper" id="id63">WallCaliper</a></p></li>
+<li><p><a class="reference internal" href="#wallchiselholder" id="id64">WallChiselHolder</a></p></li>
+<li><p><a class="reference internal" href="#wallconsole" id="id65">WallConsole</a></p></li>
+<li><p><a class="reference internal" href="#walldrillbox" id="id66">WallDrillBox</a></p></li>
+<li><p><a class="reference internal" href="#walledges" id="id67">WallEdges</a></p></li>
+<li><p><a class="reference internal" href="#wallpinrow" id="id68">WallPinRow</a></p></li>
+<li><p><a class="reference internal" href="#wallplaneholder" id="id69">WallPlaneHolder</a></p></li>
+<li><p><a class="reference internal" href="#wallpliersholder" id="id70">WallPliersHolder</a></p></li>
+<li><p><a class="reference internal" href="#wallslottedholder" id="id71">WallSlottedHolder</a></p></li>
+<li><p><a class="reference internal" href="#wallstairs" id="id72">WallStairs</a></p></li>
+<li><p><a class="reference internal" href="#walltypetray" id="id73">WallTypeTray</a></p></li>
+<li><p><a class="reference internal" href="#wallwrenchholder" id="id74">WallWrenchHolder</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#holes" id="id75">Holes</a></p>
+<ul>
+<li><p><a class="reference internal" href="#fanhole" id="id76">FanHole</a></p></li>
+<li><p><a class="reference internal" href="#holepattern" id="id77">HolePattern</a></p></li>
+<li><p><a class="reference internal" href="#nemapattern" id="id78">NemaPattern</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#part" id="id79">Part</a></p>
+<ul>
+<li><p><a class="reference internal" href="#burntest" id="id80">BurnTest</a></p></li>
+<li><p><a class="reference internal" href="#concaveknob" id="id81">ConcaveKnob</a></p></li>
+<li><p><a class="reference internal" href="#filltest" id="id82">FillTest</a></p></li>
+<li><p><a class="reference internal" href="#flextest" id="id83">FlexTest</a></p></li>
+<li><p><a class="reference internal" href="#flextest2" id="id84">FlexTest2</a></p></li>
+<li><p><a class="reference internal" href="#gearbox" id="id85">GearBox</a></p></li>
+<li><p><a class="reference internal" href="#gears" id="id86">Gears</a></p></li>
+<li><p><a class="reference internal" href="#lbeam" id="id87">LBeam</a></p></li>
+<li><p><a class="reference internal" href="#laserholdfast" id="id88">LaserHoldfast</a></p></li>
+<li><p><a class="reference internal" href="#nemamount" id="id89">NemaMount</a></p></li>
+<li><p><a class="reference internal" href="#planetary" id="id90">Planetary</a></p></li>
+<li><p><a class="reference internal" href="#pulley" id="id91">Pulley</a></p></li>
+<li><p><a class="reference internal" href="#rectangularwall" id="id92">RectangularWall</a></p></li>
+<li><p><a class="reference internal" href="#robotarm" id="id93">RobotArm</a></p></li>
+<li><p><a class="reference internal" href="#waivyknob" id="id94">WaivyKnob</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#misc" id="id95">Misc</a></p>
+<ul>
+<li><p><a class="reference internal" href="#agricolainsert" id="id96">AgricolaInsert</a></p></li>
+<li><p><a class="reference internal" href="#alledges" id="id97">AllEdges</a></p></li>
+<li><p><a class="reference internal" href="#angledcutjig" id="id98">AngledCutJig</a></p></li>
+<li><p><a class="reference internal" href="#arcade" id="id99">Arcade</a></p></li>
+<li><p><a class="reference internal" href="#atreus21" id="id100">Atreus21</a></p></li>
+<li><p><a class="reference internal" href="#bottlestack" id="id101">BottleStack</a></p></li>
+<li><p><a class="reference internal" href="#bottletag" id="id102">BottleTag</a></p></li>
+<li><p><a class="reference internal" href="#canstorage" id="id103">CanStorage</a></p></li>
+<li><p><a class="reference internal" href="#coffeecapsuleholder" id="id104">CoffeeCapsuleHolder</a></p></li>
+<li><p><a class="reference internal" href="#coindisplay" id="id105">CoinDisplay</a></p></li>
+<li><p><a class="reference internal" href="#dispenser" id="id106">Dispenser</a></p></li>
+<li><p><a class="reference internal" href="#display" id="id107">Display</a></p></li>
+<li><p><a class="reference internal" href="#drillstand" id="id108">DrillStand</a></p></li>
+<li><p><a class="reference internal" href="#folder" id="id109">Folder</a></p></li>
+<li><p><a class="reference internal" href="#hook" id="id110">Hook</a></p></li>
+<li><p><a class="reference internal" href="#jointpanel" id="id111">JointPanel</a></p></li>
+<li><p><a class="reference internal" href="#laptopstand" id="id112">LaptopStand</a></p></li>
+<li><p><a class="reference internal" href="#laserclamp" id="id113">LaserClamp</a></p></li>
+<li><p><a class="reference internal" href="#magazinfile" id="id114">MagazinFile</a></p></li>
+<li><p><a class="reference internal" href="#makitapowersupply" id="id115">MakitaPowerSupply</a></p></li>
+<li><p><a class="reference internal" href="#ottobody" id="id116">OttoBody</a></p></li>
+<li><p><a class="reference internal" href="#ottolegs" id="id117">OttoLegs</a></p></li>
+<li><p><a class="reference internal" href="#ottosoles" id="id118">OttoSoles</a></p></li>
+<li><p><a class="reference internal" href="#paperbox" id="id119">PaperBox</a></p></li>
+<li><p><a class="reference internal" href="#phoneholder" id="id120">PhoneHolder</a></p></li>
+<li><p><a class="reference internal" href="#polehook" id="id121">PoleHook</a></p></li>
+<li><p><a class="reference internal" href="#royalgame" id="id122">RoyalGame</a></p></li>
+<li><p><a class="reference internal" href="#stachel" id="id123">Stachel</a></p></li>
+<li><p><a class="reference internal" href="#trafficlight" id="id124">TrafficLight</a></p></li>
+<li><p><a class="reference internal" href="#trianglelamp" id="id125">TriangleLamp</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#unstable" id="id126">Unstable</a></p>
+<ul>
+<li><p><a class="reference internal" href="#birdhouse" id="id127">BirdHouse</a></p></li>
+<li><p><a class="reference internal" href="#breadbox" id="id128">BreadBox</a></p></li>
+<li><p><a class="reference internal" href="#castle" id="id129">Castle</a></p></li>
+<li><p><a class="reference internal" href="#organpipe" id="id130">OrganPipe</a></p></li>
+<li><p><a class="reference internal" href="#planetary2" id="id131">Planetary2</a></p></li>
+<li><p><a class="reference internal" href="#platonic" id="id132">Platonic</a></p></li>
+<li><p><a class="reference internal" href="#rotary" id="id133">Rotary</a></p></li>
+<li><p><a class="reference internal" href="#silverware" id="id134">Silverware</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="box">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Box</a><a class="headerlink" href="#box" title="Permalink to this heading">¶</a></h2>
+<section id="abox">
+<h3><a class="toc-backref" href="#id3" role="doc-backlink">ABox</a><a class="headerlink" href="#abox" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.abox.ABox">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.abox.</span></span><span class="sig-name descname"><span class="pre">ABox</span></span><a class="reference internal" href="_modules/boxes/generators/abox.html#ABox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.abox.ABox" title="Permalink to this definition">¶</a></dt>
+<dd><p>A simple Box</p>
+</dd></dl>
+
+</section>
+<section id="angledbox">
+<h3><a class="toc-backref" href="#id4" role="doc-backlink">AngledBox</a><a class="headerlink" href="#angledbox" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.angledbox.AngledBox">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.angledbox.</span></span><span class="sig-name descname"><span class="pre">AngledBox</span></span><a class="reference internal" href="_modules/boxes/generators/angledbox.html#AngledBox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.angledbox.AngledBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Box with both ends cornered</p>
+</dd></dl>
+
+<img alt="_images/AngledBox1.jpg" src="_images/AngledBox1.jpg" />
+</section>
+<section id="basedbox">
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">BasedBox</a><a class="headerlink" href="#basedbox" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.basedbox.BasedBox">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.basedbox.</span></span><span class="sig-name descname"><span class="pre">BasedBox</span></span><a class="reference internal" href="_modules/boxes/generators/basedbox.html#BasedBox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.basedbox.BasedBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fully closed box on a base</p>
+</dd></dl>
+
+<img alt="_images/BasedBox.jpg" src="_images/BasedBox.jpg" />
+</section>
+<section id="bayonetbox">
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">BayonetBox</a><a class="headerlink" href="#bayonetbox" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.bayonetbox.BayonetBox">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.bayonetbox.</span></span><span class="sig-name descname"><span class="pre">BayonetBox</span></span><a class="reference internal" href="_modules/boxes/generators/bayonetbox.html#BayonetBox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.bayonetbox.BayonetBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Round box made from layers with twist on top</p>
+</dd></dl>
+
+<img alt="_images/BayonetBox.jpg" src="_images/BayonetBox.jpg" />
+</section>
+<section id="cardbox">
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">CardBox</a><a class="headerlink" href="#cardbox" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.cardbox.CardBox">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.cardbox.</span></span><span class="sig-name descname"><span class="pre">CardBox</span></span><a class="reference internal" href="_modules/boxes/generators/cardbox.html#CardBox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.cardbox.CardBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Box for storage of playing cards</p>
+</dd></dl>
+
+<img alt="_images/CardBox.jpg" src="_images/CardBox.jpg" />
+</section>
+<section id="closedbox">
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">ClosedBox</a><a class="headerlink" href="#closedbox" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.closedbox.ClosedBox">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.closedbox.</span></span><span class="sig-name descname"><span class="pre">ClosedBox</span></span><a class="reference internal" href="_modules/boxes/generators/closedbox.html#ClosedBox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.closedbox.ClosedBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fully closed box</p>
+</dd></dl>
+
+<img alt="_images/ClosedBox.jpg" src="_images/ClosedBox.jpg" />
+</section>
+<section id="console">
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">Console</a><a class="headerlink" href="#console" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.console.Console">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.console.</span></span><span class="sig-name descname"><span class="pre">Console</span></span><a class="reference internal" href="_modules/boxes/generators/console.html#Console"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.console.Console" title="Permalink to this definition">¶</a></dt>
+<dd><p>Console with slanted panel</p>
+</dd></dl>
+
+<img alt="_images/Console.jpg" src="_images/Console.jpg" />
+</section>
+<section id="console2">
+<h3><a class="toc-backref" href="#id10" role="doc-backlink">Console2</a><a class="headerlink" href="#console2" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.console2.Console2">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.console2.</span></span><span class="sig-name descname"><span class="pre">Console2</span></span><a class="reference internal" href="_modules/boxes/generators/console2.html#Console2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.console2.Console2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Console with slanted panel and service hatches</p>
+</dd></dl>
+
+<img alt="_images/Console2.jpg" src="_images/Console2.jpg" />
+</section>
+<section id="dicebox">
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">DiceBox</a><a class="headerlink" href="#dicebox" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.dicebox.DiceBox">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.dicebox.</span></span><span class="sig-name descname"><span class="pre">DiceBox</span></span><a class="reference internal" href="_modules/boxes/generators/dicebox.html#DiceBox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.dicebox.DiceBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Box with lid and integraded hinge for storing dice</p>
+</dd></dl>
+
+<img alt="_images/DiceBox.jpg" src="_images/DiceBox.jpg" />
+</section>
+<section id="displaycase">
+<h3><a class="toc-backref" href="#id12" role="doc-backlink">DisplayCase</a><a class="headerlink" href="#displaycase" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.displaycase.DisplayCase">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.displaycase.</span></span><span class="sig-name descname"><span class="pre">DisplayCase</span></span><a class="reference internal" href="_modules/boxes/generators/displaycase.html#DisplayCase"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.displaycase.DisplayCase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fully closed box intended to be cut from transparent acrylics and to serve as a display case.</p>
+</dd></dl>
+
+<img alt="_images/DisplayCase.jpg" src="_images/DisplayCase.jpg" />
+</section>
+<section id="electronicsbox">
+<h3><a class="toc-backref" href="#id13" role="doc-backlink">ElectronicsBox</a><a class="headerlink" href="#electronicsbox" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.electronicsbox.ElectronicsBox">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.electronicsbox.</span></span><span class="sig-name descname"><span class="pre">ElectronicsBox</span></span><a class="reference internal" href="_modules/boxes/generators/electronicsbox.html#ElectronicsBox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.electronicsbox.ElectronicsBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Closed box with screw on top and mounting holes</p>
+</dd></dl>
+
+<img alt="_images/ElectronicsBox.jpg" src="_images/ElectronicsBox.jpg" />
+</section>
+<section id="eurorackskiff">
+<h3><a class="toc-backref" href="#id14" role="doc-backlink">EuroRackSkiff</a><a class="headerlink" href="#eurorackskiff" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.eurorackskiff.EuroRackSkiff">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.eurorackskiff.</span></span><span class="sig-name descname"><span class="pre">EuroRackSkiff</span></span><a class="reference internal" href="_modules/boxes/generators/eurorackskiff.html#EuroRackSkiff"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.eurorackskiff.EuroRackSkiff" title="Permalink to this definition">¶</a></dt>
+<dd><p>3U Height case with adjustable width and height and included rails</p>
+</dd></dl>
+
+<img alt="_images/EuroRackSkiff.jpg" src="_images/EuroRackSkiff.jpg" />
+</section>
+<section id="halfbox">
+<h3><a class="toc-backref" href="#id15" role="doc-backlink">HalfBox</a><a class="headerlink" href="#halfbox" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.halfbox.HalfBox">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.halfbox.</span></span><span class="sig-name descname"><span class="pre">HalfBox</span></span><a class="reference internal" href="_modules/boxes/generators/halfbox.html#HalfBox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.halfbox.HalfBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configurable half of a box which can be: a bookend, a hanging shelf, an angle clamping jig, …</p>
+</dd></dl>
+
+<img alt="_images/HalfBox.jpg" src="_images/HalfBox.jpg" />
+</section>
+<section id="hingebox">
+<h3><a class="toc-backref" href="#id16" role="doc-backlink">HingeBox</a><a class="headerlink" href="#hingebox" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.hingebox.HingeBox">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.hingebox.</span></span><span class="sig-name descname"><span class="pre">HingeBox</span></span><a class="reference internal" href="_modules/boxes/generators/hingebox.html#HingeBox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.hingebox.HingeBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Box with lid attached by cabinet hinges</p>
+</dd></dl>
+
+<img alt="_images/HingeBox1.jpg" src="_images/HingeBox1.jpg" />
+</section>
+<section id="integratedhingebox">
+<h3><a class="toc-backref" href="#id17" role="doc-backlink">IntegratedHingeBox</a><a class="headerlink" href="#integratedhingebox" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.integratedhingebox.IntegratedHingeBox">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.integratedhingebox.</span></span><span class="sig-name descname"><span class="pre">IntegratedHingeBox</span></span><a class="reference internal" href="_modules/boxes/generators/integratedhingebox.html#IntegratedHingeBox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.integratedhingebox.IntegratedHingeBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Box with lid and integraded hinge</p>
+</dd></dl>
+
+<img alt="_images/IntegratedHingeBox.jpg" src="_images/IntegratedHingeBox.jpg" />
+</section>
+<section id="keypad">
+<h3><a class="toc-backref" href="#id18" role="doc-backlink">Keypad</a><a class="headerlink" href="#keypad" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.keypad.Keypad">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.keypad.</span></span><span class="sig-name descname"><span class="pre">Keypad</span></span><a class="reference internal" href="_modules/boxes/generators/keypad.html#Keypad"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.keypad.Keypad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generator for keypads with mechanical switches.</p>
+</dd></dl>
+
+</section>
+<section id="notesholder">
+<h3><a class="toc-backref" href="#id19" role="doc-backlink">NotesHolder</a><a class="headerlink" href="#notesholder" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.notesholder.NotesHolder">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.notesholder.</span></span><span class="sig-name descname"><span class="pre">NotesHolder</span></span><a class="reference internal" href="_modules/boxes/generators/notesholder.html#NotesHolder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.notesholder.NotesHolder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Box for holding a stack of paper, coasters etc</p>
+</dd></dl>
+
+<img alt="_images/NotesHolder1.jpg" src="_images/NotesHolder1.jpg" />
+</section>
+<section id="openbox">
+<h3><a class="toc-backref" href="#id20" role="doc-backlink">OpenBox</a><a class="headerlink" href="#openbox" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.openbox.OpenBox">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.openbox.</span></span><span class="sig-name descname"><span class="pre">OpenBox</span></span><a class="reference internal" href="_modules/boxes/generators/openbox.html#OpenBox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.openbox.OpenBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Box with top and front open</p>
+</dd></dl>
+
+<img alt="_images/OpenBox.jpg" src="_images/OpenBox.jpg" />
+</section>
+<section id="rack10box">
+<h3><a class="toc-backref" href="#id21" role="doc-backlink">Rack10Box</a><a class="headerlink" href="#rack10box" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.rack10box.Rack10Box">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.rack10box.</span></span><span class="sig-name descname"><span class="pre">Rack10Box</span></span><a class="reference internal" href="_modules/boxes/generators/rack10box.html#Rack10Box"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.rack10box.Rack10Box" title="Permalink to this definition">¶</a></dt>
+<dd><p>Closed box with screw on top for mounting in a 10” rack.</p>
+</dd></dl>
+
+</section>
+<section id="rack19box">
+<h3><a class="toc-backref" href="#id22" role="doc-backlink">Rack19Box</a><a class="headerlink" href="#rack19box" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.rack19box.Rack19Box">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.rack19box.</span></span><span class="sig-name descname"><span class="pre">Rack19Box</span></span><a class="reference internal" href="_modules/boxes/generators/rack19box.html#Rack19Box"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.rack19box.Rack19Box" title="Permalink to this definition">¶</a></dt>
+<dd><p>Closed box with screw on top for mounting in a 19” rack.</p>
+</dd></dl>
+
+</section>
+<section id="rack19halfwidth">
+<h3><a class="toc-backref" href="#id23" role="doc-backlink">Rack19HalfWidth</a><a class="headerlink" href="#rack19halfwidth" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.rack19halfwidth.Rack19HalfWidth">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.rack19halfwidth.</span></span><span class="sig-name descname"><span class="pre">Rack19HalfWidth</span></span><a class="reference internal" href="_modules/boxes/generators/rack19halfwidth.html#Rack19HalfWidth"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.rack19halfwidth.Rack19HalfWidth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Half width 19inch rack unit for musical equipment.</p>
+</dd></dl>
+
+</section>
+<section id="rackbox">
+<h3><a class="toc-backref" href="#id24" role="doc-backlink">RackBox</a><a class="headerlink" href="#rackbox" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.rackbox.RackBox">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.rackbox.</span></span><span class="sig-name descname"><span class="pre">RackBox</span></span><a class="reference internal" href="_modules/boxes/generators/rackbox.html#RackBox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.rackbox.RackBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Closed box with screw on top and mounting holes</p>
+</dd></dl>
+
+</section>
+<section id="regularbox">
+<h3><a class="toc-backref" href="#id25" role="doc-backlink">RegularBox</a><a class="headerlink" href="#regularbox" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.regularbox.RegularBox">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.regularbox.</span></span><span class="sig-name descname"><span class="pre">RegularBox</span></span><a class="reference internal" href="_modules/boxes/generators/regularbox.html#RegularBox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.regularbox.RegularBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Box with regular polygon as base</p>
+</dd></dl>
+
+<img alt="_images/RegularBox.jpg" src="_images/RegularBox.jpg" />
+</section>
+<section id="regularstarbox">
+<h3><a class="toc-backref" href="#id26" role="doc-backlink">RegularStarBox</a><a class="headerlink" href="#regularstarbox" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.regularstarbox.RegularStarBox">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.regularstarbox.</span></span><span class="sig-name descname"><span class="pre">RegularStarBox</span></span><a class="reference internal" href="_modules/boxes/generators/regularstarbox.html#RegularStarBox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.regularstarbox.RegularStarBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Regular polygon boxes that form a star when closed</p>
+</dd></dl>
+
+<img alt="_images/RegularStarBox.jpg" src="_images/RegularStarBox.jpg" />
+</section>
+<section id="sidedoorhousing">
+<h3><a class="toc-backref" href="#id27" role="doc-backlink">SideDoorHousing</a><a class="headerlink" href="#sidedoorhousing" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.sidedoorhousing.SideDoorHousing">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.sidedoorhousing.</span></span><span class="sig-name descname"><span class="pre">SideDoorHousing</span></span><a class="reference internal" href="_modules/boxes/generators/sidedoorhousing.html#SideDoorHousing"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.sidedoorhousing.SideDoorHousing" title="Permalink to this definition">¶</a></dt>
+<dd><p>A box with service hatches at the sides</p>
+</dd></dl>
+
+</section>
+<section id="slidingdrawer">
+<h3><a class="toc-backref" href="#id28" role="doc-backlink">SlidingDrawer</a><a class="headerlink" href="#slidingdrawer" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.slidingdrawer.SlidingDrawer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.slidingdrawer.</span></span><span class="sig-name descname"><span class="pre">SlidingDrawer</span></span><a class="reference internal" href="_modules/boxes/generators/slidingdrawer.html#SlidingDrawer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.slidingdrawer.SlidingDrawer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sliding drawer box</p>
+</dd></dl>
+
+<img alt="_images/SlidingDrawer.jpg" src="_images/SlidingDrawer.jpg" />
+</section>
+<section id="twopiece">
+<h3><a class="toc-backref" href="#id29" role="doc-backlink">TwoPiece</a><a class="headerlink" href="#twopiece" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.two_piece.TwoPiece">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.two_piece.</span></span><span class="sig-name descname"><span class="pre">TwoPiece</span></span><a class="reference internal" href="_modules/boxes/generators/two_piece.html#TwoPiece"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.two_piece.TwoPiece" title="Permalink to this definition">¶</a></dt>
+<dd><p>A two piece box where top slips over the bottom half to form 
+the enclosure.</p>
+</dd></dl>
+
+<img alt="_images/TwoPiece1.jpg" src="_images/TwoPiece1.jpg" />
+</section>
+<section id="unevenheightbox">
+<h3><a class="toc-backref" href="#id30" role="doc-backlink">UnevenHeightBox</a><a class="headerlink" href="#unevenheightbox" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.unevenheightbox.UnevenHeightBox">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.unevenheightbox.</span></span><span class="sig-name descname"><span class="pre">UnevenHeightBox</span></span><a class="reference internal" href="_modules/boxes/generators/unevenheightbox.html#UnevenHeightBox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.unevenheightbox.UnevenHeightBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Box with different height in each corner</p>
+</dd></dl>
+
+<img alt="_images/UnevenHeightBox.jpg" src="_images/UnevenHeightBox.jpg" />
+</section>
+<section id="universalbox">
+<h3><a class="toc-backref" href="#id31" role="doc-backlink">UniversalBox</a><a class="headerlink" href="#universalbox" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.universalbox.UniversalBox">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.universalbox.</span></span><span class="sig-name descname"><span class="pre">UniversalBox</span></span><a class="reference internal" href="_modules/boxes/generators/universalbox.html#UniversalBox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.universalbox.UniversalBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Box with various options for different styles and lids</p>
+</dd></dl>
+
+<img alt="_images/UniversalBox.jpg" src="_images/UniversalBox.jpg" />
+</section>
+</section>
+<section id="flexbox">
+<h2><a class="toc-backref" href="#id32" role="doc-backlink">FlexBox</a><a class="headerlink" href="#flexbox" title="Permalink to this heading">¶</a></h2>
+<section id="doubleflexdoorbox">
+<h3><a class="toc-backref" href="#id33" role="doc-backlink">DoubleFlexDoorBox</a><a class="headerlink" href="#doubleflexdoorbox" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.doubleflexdoorbox.DoubleFlexDoorBox">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.doubleflexdoorbox.</span></span><span class="sig-name descname"><span class="pre">DoubleFlexDoorBox</span></span><a class="reference internal" href="_modules/boxes/generators/doubleflexdoorbox.html#DoubleFlexDoorBox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.doubleflexdoorbox.DoubleFlexDoorBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Box with two part lid with living hinges and round corners</p>
+</dd></dl>
+
+<img alt="_images/DoubleFlexDoorBox.jpg" src="_images/DoubleFlexDoorBox.jpg" />
+</section>
+<section id="id1">
+<h3><a class="toc-backref" href="#id34" role="doc-backlink">FlexBox</a><a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.flexbox.FlexBox">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.flexbox.</span></span><span class="sig-name descname"><span class="pre">FlexBox</span></span><a class="reference internal" href="_modules/boxes/generators/flexbox.html#FlexBox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.flexbox.FlexBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Box with living hinge and round corners</p>
+</dd></dl>
+
+<img alt="_images/FlexBox.jpg" src="_images/FlexBox.jpg" />
+</section>
+<section id="flexbox2">
+<h3><a class="toc-backref" href="#id35" role="doc-backlink">FlexBox2</a><a class="headerlink" href="#flexbox2" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.flexbox2.FlexBox2">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.flexbox2.</span></span><span class="sig-name descname"><span class="pre">FlexBox2</span></span><a class="reference internal" href="_modules/boxes/generators/flexbox2.html#FlexBox2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.flexbox2.FlexBox2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Box with living hinge and top corners rounded</p>
+</dd></dl>
+
+<img alt="_images/FlexBox21.jpg" src="_images/FlexBox21.jpg" />
+</section>
+<section id="flexbox3">
+<h3><a class="toc-backref" href="#id36" role="doc-backlink">FlexBox3</a><a class="headerlink" href="#flexbox3" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.flexbox3.FlexBox3">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.flexbox3.</span></span><span class="sig-name descname"><span class="pre">FlexBox3</span></span><a class="reference internal" href="_modules/boxes/generators/flexbox3.html#FlexBox3"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.flexbox3.FlexBox3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Box with living hinge</p>
+</dd></dl>
+
+<img alt="_images/FlexBox3.jpg" src="_images/FlexBox3.jpg" />
+</section>
+<section id="flexbox4">
+<h3><a class="toc-backref" href="#id37" role="doc-backlink">FlexBox4</a><a class="headerlink" href="#flexbox4" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.flexbox4.FlexBox4">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.flexbox4.</span></span><span class="sig-name descname"><span class="pre">FlexBox4</span></span><a class="reference internal" href="_modules/boxes/generators/flexbox4.html#FlexBox4"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.flexbox4.FlexBox4" title="Permalink to this definition">¶</a></dt>
+<dd><p>Box with living hinge and left corners rounded</p>
+</dd></dl>
+
+<img alt="_images/FlexBox4.jpg" src="_images/FlexBox4.jpg" />
+</section>
+<section id="flexbox5">
+<h3><a class="toc-backref" href="#id38" role="doc-backlink">FlexBox5</a><a class="headerlink" href="#flexbox5" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.flexbox5.FlexBox5">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.flexbox5.</span></span><span class="sig-name descname"><span class="pre">FlexBox5</span></span><a class="reference internal" href="_modules/boxes/generators/flexbox5.html#FlexBox5"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.flexbox5.FlexBox5" title="Permalink to this definition">¶</a></dt>
+<dd><p>Box with living hinge and round corners</p>
+</dd></dl>
+
+</section>
+<section id="heartbox">
+<h3><a class="toc-backref" href="#id39" role="doc-backlink">HeartBox</a><a class="headerlink" href="#heartbox" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.heart.HeartBox">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.heart.</span></span><span class="sig-name descname"><span class="pre">HeartBox</span></span><a class="reference internal" href="_modules/boxes/generators/heart.html#HeartBox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.heart.HeartBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Box in the form of an heart</p>
+</dd></dl>
+
+<img alt="_images/HeartBox1.jpg" src="_images/HeartBox1.jpg" />
+</section>
+<section id="roundedbox">
+<h3><a class="toc-backref" href="#id40" role="doc-backlink">RoundedBox</a><a class="headerlink" href="#roundedbox" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.roundedbox.RoundedBox">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.roundedbox.</span></span><span class="sig-name descname"><span class="pre">RoundedBox</span></span><a class="reference internal" href="_modules/boxes/generators/roundedbox.html#RoundedBox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.roundedbox.RoundedBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Box with vertical edges rounded</p>
+</dd></dl>
+
+<img alt="_images/RoundedBox.jpg" src="_images/RoundedBox.jpg" />
+</section>
+<section id="shutterbox">
+<h3><a class="toc-backref" href="#id41" role="doc-backlink">ShutterBox</a><a class="headerlink" href="#shutterbox" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.shutterbox.ShutterBox">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.shutterbox.</span></span><span class="sig-name descname"><span class="pre">ShutterBox</span></span><a class="reference internal" href="_modules/boxes/generators/shutterbox.html#ShutterBox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.shutterbox.ShutterBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Box with a rolling shutter made of flex</p>
+</dd></dl>
+
+<img alt="_images/ShutterBox1.jpg" src="_images/ShutterBox1.jpg" />
+</section>
+<section id="ubox">
+<h3><a class="toc-backref" href="#id42" role="doc-backlink">UBox</a><a class="headerlink" href="#ubox" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.ubox.UBox">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.ubox.</span></span><span class="sig-name descname"><span class="pre">UBox</span></span><a class="reference internal" href="_modules/boxes/generators/ubox.html#UBox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.ubox.UBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Box various options for different stypes and lids</p>
+</dd></dl>
+
+<img alt="_images/UBox.jpg" src="_images/UBox.jpg" />
+</section>
+</section>
+<section id="tray">
+<h2><a class="toc-backref" href="#id43" role="doc-backlink">Tray</a><a class="headerlink" href="#tray" title="Permalink to this heading">¶</a></h2>
+<section id="dividertray">
+<h3><a class="toc-backref" href="#id44" role="doc-backlink">DividerTray</a><a class="headerlink" href="#dividertray" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.dividertray.DividerTray">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.dividertray.</span></span><span class="sig-name descname"><span class="pre">DividerTray</span></span><a class="reference internal" href="_modules/boxes/generators/dividertray.html#DividerTray"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.dividertray.DividerTray" title="Permalink to this definition">¶</a></dt>
+<dd><p>Divider tray - rows and dividers</p>
+</dd></dl>
+
+<img alt="_images/DividerTray.jpg" src="_images/DividerTray.jpg" />
+</section>
+<section id="drillbox">
+<h3><a class="toc-backref" href="#id45" role="doc-backlink">DrillBox</a><a class="headerlink" href="#drillbox" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.drillbox.DrillBox">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.drillbox.</span></span><span class="sig-name descname"><span class="pre">DrillBox</span></span><a class="reference internal" href="_modules/boxes/generators/drillbox.html#DrillBox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.drillbox.DrillBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>A parametrized box for drills</p>
+</dd></dl>
+
+</section>
+<section id="trayinsert">
+<h3><a class="toc-backref" href="#id46" role="doc-backlink">TrayInsert</a><a class="headerlink" href="#trayinsert" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.trayinsert.TrayInsert">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.trayinsert.</span></span><span class="sig-name descname"><span class="pre">TrayInsert</span></span><a class="reference internal" href="_modules/boxes/generators/trayinsert.html#TrayInsert"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.trayinsert.TrayInsert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tray insert without floor and outer walls - allows only continuous walls</p>
+</dd></dl>
+
+<img alt="_images/TrayInsert.jpg" src="_images/TrayInsert.jpg" />
+</section>
+<section id="traylayout">
+<h3><a class="toc-backref" href="#id47" role="doc-backlink">TrayLayout</a><a class="headerlink" href="#traylayout" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.traylayout.TrayLayout">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.traylayout.</span></span><span class="sig-name descname"><span class="pre">TrayLayout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">webargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/boxes/generators/traylayout.html#TrayLayout"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.traylayout.TrayLayout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a typetray from a layout file</p>
+</dd></dl>
+
+<img alt="_images/TrayLayout.jpg" src="_images/TrayLayout.jpg" />
+</section>
+<section id="traylayout2">
+<h3><a class="toc-backref" href="#id48" role="doc-backlink">TrayLayout2</a><a class="headerlink" href="#traylayout2" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.traylayout.TrayLayout2">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.traylayout.</span></span><span class="sig-name descname"><span class="pre">TrayLayout2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">webargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/boxes/generators/traylayout.html#TrayLayout2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.traylayout.TrayLayout2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a typetray from a layout file</p>
+</dd></dl>
+
+<img alt="_images/TrayLayout2.jpg" src="_images/TrayLayout2.jpg" />
+</section>
+<section id="typetray">
+<h3><a class="toc-backref" href="#id49" role="doc-backlink">TypeTray</a><a class="headerlink" href="#typetray" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.typetray.TypeTray">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.typetray.</span></span><span class="sig-name descname"><span class="pre">TypeTray</span></span><a class="reference internal" href="_modules/boxes/generators/typetray.html#TypeTray"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.typetray.TypeTray" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type tray - allows only continuous walls</p>
+</dd></dl>
+
+<img alt="_images/TypeTray1.jpg" src="_images/TypeTray1.jpg" />
+</section>
+</section>
+<section id="shelf">
+<h2><a class="toc-backref" href="#id50" role="doc-backlink">Shelf</a><a class="headerlink" href="#shelf" title="Permalink to this heading">¶</a></h2>
+<section id="bintray">
+<h3><a class="toc-backref" href="#id51" role="doc-backlink">BinTray</a><a class="headerlink" href="#bintray" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.bintray.BinTray">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.bintray.</span></span><span class="sig-name descname"><span class="pre">BinTray</span></span><a class="reference internal" href="_modules/boxes/generators/bintray.html#BinTray"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.bintray.BinTray" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Type tray variant to be used up right with sloped walls in front</p>
+</dd></dl>
+
+<img alt="_images/BinTray1.jpg" src="_images/BinTray1.jpg" />
+</section>
+<section id="cardholder">
+<h3><a class="toc-backref" href="#id52" role="doc-backlink">CardHolder</a><a class="headerlink" href="#cardholder" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.cardholder.CardHolder">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.cardholder.</span></span><span class="sig-name descname"><span class="pre">CardHolder</span></span><a class="reference internal" href="_modules/boxes/generators/cardholder.html#CardHolder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.cardholder.CardHolder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shelf for holding (multiple) piles of playing cards / notes</p>
+</dd></dl>
+
+<img alt="_images/CardHolder.jpg" src="_images/CardHolder.jpg" />
+</section>
+<section id="discrack">
+<h3><a class="toc-backref" href="#id53" role="doc-backlink">DiscRack</a><a class="headerlink" href="#discrack" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.discrack.DiscRack">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.discrack.</span></span><span class="sig-name descname"><span class="pre">DiscRack</span></span><a class="reference internal" href="_modules/boxes/generators/discrack.html#DiscRack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.discrack.DiscRack" title="Permalink to this definition">¶</a></dt>
+<dd><p>A rack for storing disk-shaped objects vertically next to each other</p>
+</dd></dl>
+
+<img alt="_images/DiscRack.jpg" src="_images/DiscRack.jpg" />
+</section>
+<section id="displayshelf">
+<h3><a class="toc-backref" href="#id54" role="doc-backlink">DisplayShelf</a><a class="headerlink" href="#displayshelf" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.displayshelf.DisplayShelf">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.displayshelf.</span></span><span class="sig-name descname"><span class="pre">DisplayShelf</span></span><a class="reference internal" href="_modules/boxes/generators/displayshelf.html#DisplayShelf"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.displayshelf.DisplayShelf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shelf with slanted floors</p>
+</dd></dl>
+
+<img alt="_images/DisplayShelf1.jpg" src="_images/DisplayShelf1.jpg" />
+</section>
+<section id="paintstorage">
+<h3><a class="toc-backref" href="#id55" role="doc-backlink">PaintStorage</a><a class="headerlink" href="#paintstorage" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.paintbox.PaintStorage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.paintbox.</span></span><span class="sig-name descname"><span class="pre">PaintStorage</span></span><a class="reference internal" href="_modules/boxes/generators/paintbox.html#PaintStorage"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.paintbox.PaintStorage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stackable storage for hobby paint or other things</p>
+</dd></dl>
+
+<img alt="_images/PaintStorage1.jpg" src="_images/PaintStorage1.jpg" />
+</section>
+<section id="sbcmicrorack">
+<h3><a class="toc-backref" href="#id56" role="doc-backlink">SBCMicroRack</a><a class="headerlink" href="#sbcmicrorack" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.microrack.SBCMicroRack">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.microrack.</span></span><span class="sig-name descname"><span class="pre">SBCMicroRack</span></span><a class="reference internal" href="_modules/boxes/generators/microrack.html#SBCMicroRack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.microrack.SBCMicroRack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stackable rackable racks for SBC Pi-Style Computers</p>
+</dd></dl>
+
+<img alt="_images/SBCMicroRack.jpg" src="_images/SBCMicroRack.jpg" />
+</section>
+<section id="spicesrack">
+<h3><a class="toc-backref" href="#id57" role="doc-backlink">SpicesRack</a><a class="headerlink" href="#spicesrack" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.spicesrack.SpicesRack">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.spicesrack.</span></span><span class="sig-name descname"><span class="pre">SpicesRack</span></span><a class="reference internal" href="_modules/boxes/generators/spicesrack.html#SpicesRack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.spicesrack.SpicesRack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rack for cans of spices</p>
+</dd></dl>
+
+<img alt="_images/SpicesRack.jpg" src="_images/SpicesRack.jpg" />
+</section>
+<section id="storagerack">
+<h3><a class="toc-backref" href="#id58" role="doc-backlink">StorageRack</a><a class="headerlink" href="#storagerack" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.storagerack.StorageRack">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.storagerack.</span></span><span class="sig-name descname"><span class="pre">StorageRack</span></span><a class="reference internal" href="_modules/boxes/generators/storagerack.html#StorageRack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.storagerack.StorageRack" title="Permalink to this definition">¶</a></dt>
+<dd><p>StorageRack to store boxes and trays which have their own floor</p>
+</dd></dl>
+
+<img alt="_images/StorageRack.jpg" src="_images/StorageRack.jpg" />
+</section>
+<section id="storageshelf">
+<h3><a class="toc-backref" href="#id59" role="doc-backlink">StorageShelf</a><a class="headerlink" href="#storageshelf" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.storageshelf.StorageShelf">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.storageshelf.</span></span><span class="sig-name descname"><span class="pre">StorageShelf</span></span><a class="reference internal" href="_modules/boxes/generators/storageshelf.html#StorageShelf"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.storageshelf.StorageShelf" title="Permalink to this definition">¶</a></dt>
+<dd><p>StorageShelf can be used to store Typetray</p>
+</dd></dl>
+
+<img alt="_images/StorageShelf.jpg" src="_images/StorageShelf.jpg" />
+</section>
+<section id="winerack">
+<h3><a class="toc-backref" href="#id60" role="doc-backlink">WineRack</a><a class="headerlink" href="#winerack" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.winerack.WineRack">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.winerack.</span></span><span class="sig-name descname"><span class="pre">WineRack</span></span><a class="reference internal" href="_modules/boxes/generators/winerack.html#WineRack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.winerack.WineRack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Honey Comb Style Wine Rack</p>
+</dd></dl>
+
+<img alt="_images/WineRack.jpg" src="_images/WineRack.jpg" />
+</section>
+</section>
+<section id="wallmounted">
+<h2><a class="toc-backref" href="#id61" role="doc-backlink">WallMounted</a><a class="headerlink" href="#wallmounted" title="Permalink to this heading">¶</a></h2>
+<section id="dinrailbox">
+<h3><a class="toc-backref" href="#id62" role="doc-backlink">DinRailBox</a><a class="headerlink" href="#dinrailbox" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.dinrailbox.DinRailBox">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.dinrailbox.</span></span><span class="sig-name descname"><span class="pre">DinRailBox</span></span><a class="reference internal" href="_modules/boxes/generators/dinrailbox.html#DinRailBox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.dinrailbox.DinRailBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Box for DIN rail used in electrical junction boxes</p>
+</dd></dl>
+
+</section>
+<section id="wallcaliper">
+<h3><a class="toc-backref" href="#id63" role="doc-backlink">WallCaliper</a><a class="headerlink" href="#wallcaliper" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.wallcaliperholder.WallCaliper">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.wallcaliperholder.</span></span><span class="sig-name descname"><span class="pre">WallCaliper</span></span><a class="reference internal" href="_modules/boxes/generators/wallcaliperholder.html#WallCaliper"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.wallcaliperholder.WallCaliper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Holds a single caliper to a wall</p>
+</dd></dl>
+
+<img alt="_images/WallCaliper.jpg" src="_images/WallCaliper.jpg" />
+</section>
+<section id="wallchiselholder">
+<h3><a class="toc-backref" href="#id64" role="doc-backlink">WallChiselHolder</a><a class="headerlink" href="#wallchiselholder" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.wallchiselholder.WallChiselHolder">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.wallchiselholder.</span></span><span class="sig-name descname"><span class="pre">WallChiselHolder</span></span><a class="reference internal" href="_modules/boxes/generators/wallchiselholder.html#WallChiselHolder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.wallchiselholder.WallChiselHolder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wall tool holder for chisels, files and similar tools</p>
+</dd></dl>
+
+</section>
+<section id="wallconsole">
+<h3><a class="toc-backref" href="#id65" role="doc-backlink">WallConsole</a><a class="headerlink" href="#wallconsole" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.wallconsole.WallConsole">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.wallconsole.</span></span><span class="sig-name descname"><span class="pre">WallConsole</span></span><a class="reference internal" href="_modules/boxes/generators/wallconsole.html#WallConsole"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.wallconsole.WallConsole" title="Permalink to this definition">¶</a></dt>
+<dd><p>Outset and angled plate to mount stuff to</p>
+</dd></dl>
+
+</section>
+<section id="walldrillbox">
+<h3><a class="toc-backref" href="#id66" role="doc-backlink">WallDrillBox</a><a class="headerlink" href="#walldrillbox" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.walldrillbox.WallDrillBox">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.walldrillbox.</span></span><span class="sig-name descname"><span class="pre">WallDrillBox</span></span><a class="reference internal" href="_modules/boxes/generators/walldrillbox.html#WallDrillBox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.walldrillbox.WallDrillBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Box for drills with each compartment with a different height</p>
+</dd></dl>
+
+<img alt="_images/WallDrillBox.jpg" src="_images/WallDrillBox.jpg" />
+</section>
+<section id="walledges">
+<h3><a class="toc-backref" href="#id67" role="doc-backlink">WallEdges</a><a class="headerlink" href="#walledges" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.walledges.WallEdges">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.walledges.</span></span><span class="sig-name descname"><span class="pre">WallEdges</span></span><a class="reference internal" href="_modules/boxes/generators/walledges.html#WallEdges"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.walledges.WallEdges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shows the different edge types for wall systems</p>
+</dd></dl>
+
+</section>
+<section id="wallpinrow">
+<h3><a class="toc-backref" href="#id68" role="doc-backlink">WallPinRow</a><a class="headerlink" href="#wallpinrow" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.wallpinrow.WallPinRow">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.wallpinrow.</span></span><span class="sig-name descname"><span class="pre">WallPinRow</span></span><a class="reference internal" href="_modules/boxes/generators/wallpinrow.html#WallPinRow"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.wallpinrow.WallPinRow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Outset and angled plate to mount stuff to</p>
+</dd></dl>
+
+</section>
+<section id="wallplaneholder">
+<h3><a class="toc-backref" href="#id69" role="doc-backlink">WallPlaneHolder</a><a class="headerlink" href="#wallplaneholder" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.wallplaneholder.WallPlaneHolder">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.wallplaneholder.</span></span><span class="sig-name descname"><span class="pre">WallPlaneHolder</span></span><a class="reference internal" href="_modules/boxes/generators/wallplaneholder.html#WallPlaneHolder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.wallplaneholder.WallPlaneHolder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hold a plane to a wall</p>
+</dd></dl>
+
+</section>
+<section id="wallpliersholder">
+<h3><a class="toc-backref" href="#id70" role="doc-backlink">WallPliersHolder</a><a class="headerlink" href="#wallpliersholder" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.wallpliersholder.WallPliersHolder">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.wallpliersholder.</span></span><span class="sig-name descname"><span class="pre">WallPliersHolder</span></span><a class="reference internal" href="_modules/boxes/generators/wallpliersholder.html#WallPliersHolder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.wallpliersholder.WallPliersHolder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bar to hang pliers on</p>
+</dd></dl>
+
+<img alt="_images/WallPliersHolder.jpg" src="_images/WallPliersHolder.jpg" />
+</section>
+<section id="wallslottedholder">
+<h3><a class="toc-backref" href="#id71" role="doc-backlink">WallSlottedHolder</a><a class="headerlink" href="#wallslottedholder" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.wallslottedholder.WallSlottedHolder">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.wallslottedholder.</span></span><span class="sig-name descname"><span class="pre">WallSlottedHolder</span></span><a class="reference internal" href="_modules/boxes/generators/wallslottedholder.html#WallSlottedHolder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.wallslottedholder.WallSlottedHolder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wall tool holder with slots</p>
+</dd></dl>
+
+<img alt="_images/WallSlottedHolder.jpg" src="_images/WallSlottedHolder.jpg" />
+</section>
+<section id="wallstairs">
+<h3><a class="toc-backref" href="#id72" role="doc-backlink">WallStairs</a><a class="headerlink" href="#wallstairs" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.wallstairs.WallStairs">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.wallstairs.</span></span><span class="sig-name descname"><span class="pre">WallStairs</span></span><a class="reference internal" href="_modules/boxes/generators/wallstairs.html#WallStairs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.wallstairs.WallStairs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Platforms in different heights e.g. for screw drivers</p>
+</dd></dl>
+
+</section>
+<section id="walltypetray">
+<h3><a class="toc-backref" href="#id73" role="doc-backlink">WallTypeTray</a><a class="headerlink" href="#walltypetray" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.walltypetray.WallTypeTray">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.walltypetray.</span></span><span class="sig-name descname"><span class="pre">WallTypeTray</span></span><a class="reference internal" href="_modules/boxes/generators/walltypetray.html#WallTypeTray"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.walltypetray.WallTypeTray" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type tray - allows only continuous walls</p>
+</dd></dl>
+
+<img alt="_images/WallTypeTray.jpg" src="_images/WallTypeTray.jpg" />
+</section>
+<section id="wallwrenchholder">
+<h3><a class="toc-backref" href="#id74" role="doc-backlink">WallWrenchHolder</a><a class="headerlink" href="#wallwrenchholder" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.wallwrenchholder.WallWrenchHolder">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.wallwrenchholder.</span></span><span class="sig-name descname"><span class="pre">WallWrenchHolder</span></span><a class="reference internal" href="_modules/boxes/generators/wallwrenchholder.html#WallWrenchHolder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.wallwrenchholder.WallWrenchHolder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hold a set of wrenches at a wall</p>
+</dd></dl>
+
+</section>
+</section>
+<section id="holes">
+<h2><a class="toc-backref" href="#id75" role="doc-backlink">Holes</a><a class="headerlink" href="#holes" title="Permalink to this heading">¶</a></h2>
+<section id="fanhole">
+<h3><a class="toc-backref" href="#id76" role="doc-backlink">FanHole</a><a class="headerlink" href="#fanhole" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.fanhole.FanHole">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.fanhole.</span></span><span class="sig-name descname"><span class="pre">FanHole</span></span><a class="reference internal" href="_modules/boxes/generators/fanhole.html#FanHole"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.fanhole.FanHole" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hole pattern for mounting a fan</p>
+</dd></dl>
+
+</section>
+<section id="holepattern">
+<h3><a class="toc-backref" href="#id77" role="doc-backlink">HolePattern</a><a class="headerlink" href="#holepattern" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.holepattern.HolePattern">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.holepattern.</span></span><span class="sig-name descname"><span class="pre">HolePattern</span></span><a class="reference internal" href="_modules/boxes/generators/holepattern.html#HolePattern"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.holepattern.HolePattern" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate hole patterns in different simple shapes</p>
+</dd></dl>
+
+</section>
+<section id="nemapattern">
+<h3><a class="toc-backref" href="#id78" role="doc-backlink">NemaPattern</a><a class="headerlink" href="#nemapattern" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.nemapattern.NemaPattern">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.nemapattern.</span></span><span class="sig-name descname"><span class="pre">NemaPattern</span></span><a class="reference internal" href="_modules/boxes/generators/nemapattern.html#NemaPattern"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.nemapattern.NemaPattern" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mounting holes for a Nema motor</p>
+</dd></dl>
+
+</section>
+</section>
+<section id="part">
+<h2><a class="toc-backref" href="#id79" role="doc-backlink">Part</a><a class="headerlink" href="#part" title="Permalink to this heading">¶</a></h2>
+<section id="burntest">
+<h3><a class="toc-backref" href="#id80" role="doc-backlink">BurnTest</a><a class="headerlink" href="#burntest" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.burntest.BurnTest">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.burntest.</span></span><span class="sig-name descname"><span class="pre">BurnTest</span></span><a class="reference internal" href="_modules/boxes/generators/burntest.html#BurnTest"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.burntest.BurnTest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test different burn values</p>
+</dd></dl>
+
+<img alt="_images/BurnTest.jpg" src="_images/BurnTest.jpg" />
+</section>
+<section id="concaveknob">
+<h3><a class="toc-backref" href="#id81" role="doc-backlink">ConcaveKnob</a><a class="headerlink" href="#concaveknob" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.concaveknob.ConcaveKnob">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.concaveknob.</span></span><span class="sig-name descname"><span class="pre">ConcaveKnob</span></span><a class="reference internal" href="_modules/boxes/generators/concaveknob.html#ConcaveKnob"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.concaveknob.ConcaveKnob" title="Permalink to this definition">¶</a></dt>
+<dd><p>Round knob serrated outside for better gripping</p>
+</dd></dl>
+
+</section>
+<section id="filltest">
+<h3><a class="toc-backref" href="#id82" role="doc-backlink">FillTest</a><a class="headerlink" href="#filltest" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.filltest.FillTest">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.filltest.</span></span><span class="sig-name descname"><span class="pre">FillTest</span></span><a class="reference internal" href="_modules/boxes/generators/filltest.html#FillTest"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.filltest.FillTest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Piece for testing different settings for hole filling</p>
+</dd></dl>
+
+</section>
+<section id="flextest">
+<h3><a class="toc-backref" href="#id83" role="doc-backlink">FlexTest</a><a class="headerlink" href="#flextest" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.flextest.FlexTest">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.flextest.</span></span><span class="sig-name descname"><span class="pre">FlexTest</span></span><a class="reference internal" href="_modules/boxes/generators/flextest.html#FlexTest"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.flextest.FlexTest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Piece for testing different flex settings</p>
+</dd></dl>
+
+<img alt="_images/FlexTest.jpg" src="_images/FlexTest.jpg" />
+</section>
+<section id="flextest2">
+<h3><a class="toc-backref" href="#id84" role="doc-backlink">FlexTest2</a><a class="headerlink" href="#flextest2" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.flextest2.FlexTest2">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.flextest2.</span></span><span class="sig-name descname"><span class="pre">FlexTest2</span></span><a class="reference internal" href="_modules/boxes/generators/flextest2.html#FlexTest2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.flextest2.FlexTest2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Piece for testing 2D flex settings</p>
+</dd></dl>
+
+</section>
+<section id="gearbox">
+<h3><a class="toc-backref" href="#id85" role="doc-backlink">GearBox</a><a class="headerlink" href="#gearbox" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.gearbox.GearBox">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.gearbox.</span></span><span class="sig-name descname"><span class="pre">GearBox</span></span><a class="reference internal" href="_modules/boxes/generators/gearbox.html#GearBox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.gearbox.GearBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gearbox with multiple identical stages</p>
+</dd></dl>
+
+</section>
+<section id="gears">
+<h3><a class="toc-backref" href="#id86" role="doc-backlink">Gears</a><a class="headerlink" href="#gears" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.gear.Gears">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.gear.</span></span><span class="sig-name descname"><span class="pre">Gears</span></span><a class="reference internal" href="_modules/boxes/generators/gear.html#Gears"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.gear.Gears" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="lbeam">
+<h3><a class="toc-backref" href="#id87" role="doc-backlink">LBeam</a><a class="headerlink" href="#lbeam" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.lbeam.LBeam">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.lbeam.</span></span><span class="sig-name descname"><span class="pre">LBeam</span></span><a class="reference internal" href="_modules/boxes/generators/lbeam.html#LBeam"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.lbeam.LBeam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simple L-Beam: two pieces joined with a right angle</p>
+</dd></dl>
+
+<img alt="_images/LBeam.jpg" src="_images/LBeam.jpg" />
+</section>
+<section id="laserholdfast">
+<h3><a class="toc-backref" href="#id88" role="doc-backlink">LaserHoldfast</a><a class="headerlink" href="#laserholdfast" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.laserholdfast.LaserHoldfast">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.laserholdfast.</span></span><span class="sig-name descname"><span class="pre">LaserHoldfast</span></span><a class="reference internal" href="_modules/boxes/generators/laserholdfast.html#LaserHoldfast"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.laserholdfast.LaserHoldfast" title="Permalink to this definition">¶</a></dt>
+<dd><p>A holdfast for honey comb tables of laser cutters</p>
+</dd></dl>
+
+<img alt="_images/LaserHoldfast.jpg" src="_images/LaserHoldfast.jpg" />
+</section>
+<section id="nemamount">
+<h3><a class="toc-backref" href="#id89" role="doc-backlink">NemaMount</a><a class="headerlink" href="#nemamount" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.nemamount.NemaMount">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.nemamount.</span></span><span class="sig-name descname"><span class="pre">NemaMount</span></span><a class="reference internal" href="_modules/boxes/generators/nemamount.html#NemaMount"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.nemamount.NemaMount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mounting braket for a Nema motor</p>
+</dd></dl>
+
+</section>
+<section id="planetary">
+<h3><a class="toc-backref" href="#id90" role="doc-backlink">Planetary</a><a class="headerlink" href="#planetary" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.planetary.Planetary">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.planetary.</span></span><span class="sig-name descname"><span class="pre">Planetary</span></span><a class="reference internal" href="_modules/boxes/generators/planetary.html#Planetary"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.planetary.Planetary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Planetary Gear with possibly multiple identical stages</p>
+</dd></dl>
+
+</section>
+<section id="pulley">
+<h3><a class="toc-backref" href="#id91" role="doc-backlink">Pulley</a><a class="headerlink" href="#pulley" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.pulley.Pulley">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.pulley.</span></span><span class="sig-name descname"><span class="pre">Pulley</span></span><a class="reference internal" href="_modules/boxes/generators/pulley.html#Pulley"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.pulley.Pulley" title="Permalink to this definition">¶</a></dt>
+<dd><p>Timing belt pulleys for different profiles</p>
+</dd></dl>
+
+</section>
+<section id="rectangularwall">
+<h3><a class="toc-backref" href="#id92" role="doc-backlink">RectangularWall</a><a class="headerlink" href="#rectangularwall" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.rectangularWall.RectangularWall">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.rectangularWall.</span></span><span class="sig-name descname"><span class="pre">RectangularWall</span></span><a class="reference internal" href="_modules/boxes/generators/rectangularWall.html#RectangularWall"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.rectangularWall.RectangularWall" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simple wall</p>
+</dd></dl>
+
+</section>
+<section id="robotarm">
+<h3><a class="toc-backref" href="#id93" role="doc-backlink">RobotArm</a><a class="headerlink" href="#robotarm" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.robotarm.RobotArm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.robotarm.</span></span><span class="sig-name descname"><span class="pre">RobotArm</span></span><a class="reference internal" href="_modules/boxes/generators/robotarm.html#RobotArm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.robotarm.RobotArm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Segments of servo powered robot arm</p>
+</dd></dl>
+
+<img alt="_images/RobotArm.jpg" src="_images/RobotArm.jpg" />
+</section>
+<section id="waivyknob">
+<h3><a class="toc-backref" href="#id94" role="doc-backlink">WaivyKnob</a><a class="headerlink" href="#waivyknob" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.waivyknob.WaivyKnob">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.waivyknob.</span></span><span class="sig-name descname"><span class="pre">WaivyKnob</span></span><a class="reference internal" href="_modules/boxes/generators/waivyknob.html#WaivyKnob"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.waivyknob.WaivyKnob" title="Permalink to this definition">¶</a></dt>
+<dd><p>Round knob serrated outside for better gripping</p>
+</dd></dl>
+
+</section>
+</section>
+<section id="misc">
+<h2><a class="toc-backref" href="#id95" role="doc-backlink">Misc</a><a class="headerlink" href="#misc" title="Permalink to this heading">¶</a></h2>
+<section id="agricolainsert">
+<h3><a class="toc-backref" href="#id96" role="doc-backlink">AgricolaInsert</a><a class="headerlink" href="#agricolainsert" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.agricolainsert.AgricolaInsert">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.agricolainsert.</span></span><span class="sig-name descname"><span class="pre">AgricolaInsert</span></span><a class="reference internal" href="_modules/boxes/generators/agricolainsert.html#AgricolaInsert"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.agricolainsert.AgricolaInsert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Agricola Revised Edition game box insert, including some expansions.</p>
+</dd></dl>
+
+<img alt="_images/AgricolaInsert1.jpg" src="_images/AgricolaInsert1.jpg" />
+</section>
+<section id="alledges">
+<h3><a class="toc-backref" href="#id97" role="doc-backlink">AllEdges</a><a class="headerlink" href="#alledges" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.alledges.AllEdges">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.alledges.</span></span><span class="sig-name descname"><span class="pre">AllEdges</span></span><a class="reference internal" href="_modules/boxes/generators/alledges.html#AllEdges"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.alledges.AllEdges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Showing all edge types</p>
+</dd></dl>
+
+<img alt="_images/AllEdges.jpg" src="_images/AllEdges.jpg" />
+</section>
+<section id="angledcutjig">
+<h3><a class="toc-backref" href="#id98" role="doc-backlink">AngledCutJig</a><a class="headerlink" href="#angledcutjig" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.angledcutjig.AngledCutJig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.angledcutjig.</span></span><span class="sig-name descname"><span class="pre">AngledCutJig</span></span><a class="reference internal" href="_modules/boxes/generators/angledcutjig.html#AngledCutJig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.angledcutjig.AngledCutJig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Jig for making angled cuts in a laser cutter</p>
+</dd></dl>
+
+<img alt="_images/AngledCutJig.jpg" src="_images/AngledCutJig.jpg" />
+</section>
+<section id="arcade">
+<h3><a class="toc-backref" href="#id99" role="doc-backlink">Arcade</a><a class="headerlink" href="#arcade" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.arcade.Arcade">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.arcade.</span></span><span class="sig-name descname"><span class="pre">Arcade</span></span><a class="reference internal" href="_modules/boxes/generators/arcade.html#Arcade"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.arcade.Arcade" title="Permalink to this definition">¶</a></dt>
+<dd><p>Desktop Arcade Machine</p>
+</dd></dl>
+
+</section>
+<section id="atreus21">
+<h3><a class="toc-backref" href="#id100" role="doc-backlink">Atreus21</a><a class="headerlink" href="#atreus21" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.atreus21.Atreus21">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.atreus21.</span></span><span class="sig-name descname"><span class="pre">Atreus21</span></span><a class="reference internal" href="_modules/boxes/generators/atreus21.html#Atreus21"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.atreus21.Atreus21" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generator for a split atreus keyboard.</p>
+</dd></dl>
+
+<img alt="_images/Atreus211.jpg" src="_images/Atreus211.jpg" />
+</section>
+<section id="bottlestack">
+<h3><a class="toc-backref" href="#id101" role="doc-backlink">BottleStack</a><a class="headerlink" href="#bottlestack" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.bottlestack.BottleStack">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.bottlestack.</span></span><span class="sig-name descname"><span class="pre">BottleStack</span></span><a class="reference internal" href="_modules/boxes/generators/bottlestack.html#BottleStack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.bottlestack.BottleStack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stack bottles in a fridge</p>
+</dd></dl>
+
+</section>
+<section id="bottletag">
+<h3><a class="toc-backref" href="#id102" role="doc-backlink">BottleTag</a><a class="headerlink" href="#bottletag" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.bottletag.BottleTag">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.bottletag.</span></span><span class="sig-name descname"><span class="pre">BottleTag</span></span><a class="reference internal" href="_modules/boxes/generators/bottletag.html#BottleTag"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.bottletag.BottleTag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Paper slip over bottle tag</p>
+</dd></dl>
+
+<img alt="_images/BottleTag.jpg" src="_images/BottleTag.jpg" />
+</section>
+<section id="canstorage">
+<h3><a class="toc-backref" href="#id103" role="doc-backlink">CanStorage</a><a class="headerlink" href="#canstorage" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.can_storage.CanStorage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.can_storage.</span></span><span class="sig-name descname"><span class="pre">CanStorage</span></span><a class="reference internal" href="_modules/boxes/generators/can_storage.html#CanStorage"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.can_storage.CanStorage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Storage box for round containers</p>
+</dd></dl>
+
+<img alt="_images/CanStorage.jpg" src="_images/CanStorage.jpg" />
+</section>
+<section id="coffeecapsuleholder">
+<h3><a class="toc-backref" href="#id104" role="doc-backlink">CoffeeCapsuleHolder</a><a class="headerlink" href="#coffeecapsuleholder" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.coffeecapsulesholder.CoffeeCapsuleHolder">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.coffeecapsulesholder.</span></span><span class="sig-name descname"><span class="pre">CoffeeCapsuleHolder</span></span><a class="reference internal" href="_modules/boxes/generators/coffeecapsulesholder.html#CoffeeCapsuleHolder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.coffeecapsulesholder.CoffeeCapsuleHolder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Coffee capsule holder</p>
+</dd></dl>
+
+<img alt="_images/CoffeeCapsuleHolder.jpg" src="_images/CoffeeCapsuleHolder.jpg" />
+</section>
+<section id="coindisplay">
+<h3><a class="toc-backref" href="#id105" role="doc-backlink">CoinDisplay</a><a class="headerlink" href="#coindisplay" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.coindisplay.CoinDisplay">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.coindisplay.</span></span><span class="sig-name descname"><span class="pre">CoinDisplay</span></span><a class="reference internal" href="_modules/boxes/generators/coindisplay.html#CoinDisplay"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.coindisplay.CoinDisplay" title="Permalink to this definition">¶</a></dt>
+<dd><p>A showcase for a single coin</p>
+</dd></dl>
+
+<img alt="_images/CoinDisplay.jpg" src="_images/CoinDisplay.jpg" />
+</section>
+<section id="dispenser">
+<h3><a class="toc-backref" href="#id106" role="doc-backlink">Dispenser</a><a class="headerlink" href="#dispenser" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.dispenser.Dispenser">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.dispenser.</span></span><span class="sig-name descname"><span class="pre">Dispenser</span></span><a class="reference internal" href="_modules/boxes/generators/dispenser.html#Dispenser"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.dispenser.Dispenser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dispenser for stackable (flat) items of same size</p>
+</dd></dl>
+
+</section>
+<section id="display">
+<h3><a class="toc-backref" href="#id107" role="doc-backlink">Display</a><a class="headerlink" href="#display" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.display.Display">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.display.</span></span><span class="sig-name descname"><span class="pre">Display</span></span><a class="reference internal" href="_modules/boxes/generators/display.html#Display"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.display.Display" title="Permalink to this definition">¶</a></dt>
+<dd><p>Diplay for flyers or leaflets</p>
+</dd></dl>
+
+</section>
+<section id="drillstand">
+<h3><a class="toc-backref" href="#id108" role="doc-backlink">DrillStand</a><a class="headerlink" href="#drillstand" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.drillstand.DrillStand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.drillstand.</span></span><span class="sig-name descname"><span class="pre">DrillStand</span></span><a class="reference internal" href="_modules/boxes/generators/drillstand.html#DrillStand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.drillstand.DrillStand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Box for drills with each compartment of a different height</p>
+</dd></dl>
+
+<img alt="_images/DrillStand.jpg" src="_images/DrillStand.jpg" />
+</section>
+<section id="folder">
+<h3><a class="toc-backref" href="#id109" role="doc-backlink">Folder</a><a class="headerlink" href="#folder" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.folder.Folder">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.folder.</span></span><span class="sig-name descname"><span class="pre">Folder</span></span><a class="reference internal" href="_modules/boxes/generators/folder.html#Folder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.folder.Folder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Book cover with flex for the spine</p>
+</dd></dl>
+
+<img alt="_images/Folder.jpg" src="_images/Folder.jpg" />
+</section>
+<section id="hook">
+<h3><a class="toc-backref" href="#id110" role="doc-backlink">Hook</a><a class="headerlink" href="#hook" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.hooks.Hook">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.hooks.</span></span><span class="sig-name descname"><span class="pre">Hook</span></span><a class="reference internal" href="_modules/boxes/generators/hooks.html#Hook"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.hooks.Hook" title="Permalink to this definition">¶</a></dt>
+<dd><p>A hook wit a rectangular mouth to mount at the wall</p>
+</dd></dl>
+
+</section>
+<section id="jointpanel">
+<h3><a class="toc-backref" href="#id111" role="doc-backlink">JointPanel</a><a class="headerlink" href="#jointpanel" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.jointpanel.JointPanel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.jointpanel.</span></span><span class="sig-name descname"><span class="pre">JointPanel</span></span><a class="reference internal" href="_modules/boxes/generators/jointpanel.html#JointPanel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.jointpanel.JointPanel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create pieces larger than your laser cutter by joining them with Dove Tails</p>
+</dd></dl>
+
+<img alt="_images/JointPanel.jpg" src="_images/JointPanel.jpg" />
+</section>
+<section id="laptopstand">
+<h3><a class="toc-backref" href="#id112" role="doc-backlink">LaptopStand</a><a class="headerlink" href="#laptopstand" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.laptopstand.LaptopStand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.laptopstand.</span></span><span class="sig-name descname"><span class="pre">LaptopStand</span></span><a class="reference internal" href="_modules/boxes/generators/laptopstand.html#LaptopStand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.laptopstand.LaptopStand" title="Permalink to this definition">¶</a></dt>
+<dd><p>A simple X shaped frame to support a laptop on a given angle</p>
+</dd></dl>
+
+</section>
+<section id="laserclamp">
+<h3><a class="toc-backref" href="#id113" role="doc-backlink">LaserClamp</a><a class="headerlink" href="#laserclamp" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.laserclamp.LaserClamp">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.laserclamp.</span></span><span class="sig-name descname"><span class="pre">LaserClamp</span></span><a class="reference internal" href="_modules/boxes/generators/laserclamp.html#LaserClamp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.laserclamp.LaserClamp" title="Permalink to this definition">¶</a></dt>
+<dd><p>A clamp to hold down material to a knife table</p>
+</dd></dl>
+
+<img alt="_images/LaserClamp.jpg" src="_images/LaserClamp.jpg" />
+</section>
+<section id="magazinfile">
+<h3><a class="toc-backref" href="#id114" role="doc-backlink">MagazinFile</a><a class="headerlink" href="#magazinfile" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.magazinefile.MagazinFile">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.magazinefile.</span></span><span class="sig-name descname"><span class="pre">MagazinFile</span></span><a class="reference internal" href="_modules/boxes/generators/magazinefile.html#MagazinFile"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.magazinefile.MagazinFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open magazine file</p>
+</dd></dl>
+
+<img alt="_images/MagazinFile.jpg" src="_images/MagazinFile.jpg" />
+</section>
+<section id="makitapowersupply">
+<h3><a class="toc-backref" href="#id115" role="doc-backlink">MakitaPowerSupply</a><a class="headerlink" href="#makitapowersupply" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.makitapowersupply.MakitaPowerSupply">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.makitapowersupply.</span></span><span class="sig-name descname"><span class="pre">MakitaPowerSupply</span></span><a class="reference internal" href="_modules/boxes/generators/makitapowersupply.html#MakitaPowerSupply"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.makitapowersupply.MakitaPowerSupply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bench power supply powered with Maktia 18V battery or laptop power supply</p>
+</dd></dl>
+
+<img alt="_images/MakitaPowerSupply.jpg" src="_images/MakitaPowerSupply.jpg" />
+</section>
+<section id="ottobody">
+<h3><a class="toc-backref" href="#id116" role="doc-backlink">OttoBody</a><a class="headerlink" href="#ottobody" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.ottobody.OttoBody">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.ottobody.</span></span><span class="sig-name descname"><span class="pre">OttoBody</span></span><a class="reference internal" href="_modules/boxes/generators/ottobody.html#OttoBody"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.ottobody.OttoBody" title="Permalink to this definition">¶</a></dt>
+<dd><p>Otto LC - a laser cut chassis for Otto DIY - body</p>
+</dd></dl>
+
+<img alt="_images/OttoBody1.jpg" src="_images/OttoBody1.jpg" />
+</section>
+<section id="ottolegs">
+<h3><a class="toc-backref" href="#id117" role="doc-backlink">OttoLegs</a><a class="headerlink" href="#ottolegs" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.ottolegs.OttoLegs">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.ottolegs.</span></span><span class="sig-name descname"><span class="pre">OttoLegs</span></span><a class="reference internal" href="_modules/boxes/generators/ottolegs.html#OttoLegs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.ottolegs.OttoLegs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Otto LC - a laser cut chassis for Otto DIY - legs</p>
+</dd></dl>
+
+</section>
+<section id="ottosoles">
+<h3><a class="toc-backref" href="#id118" role="doc-backlink">OttoSoles</a><a class="headerlink" href="#ottosoles" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.ottosoles.OttoSoles">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.ottosoles.</span></span><span class="sig-name descname"><span class="pre">OttoSoles</span></span><a class="reference internal" href="_modules/boxes/generators/ottosoles.html#OttoSoles"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.ottosoles.OttoSoles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Foam soles for the OttO bot</p>
+</dd></dl>
+
+</section>
+<section id="paperbox">
+<h3><a class="toc-backref" href="#id119" role="doc-backlink">PaperBox</a><a class="headerlink" href="#paperbox" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.paperbox.PaperBox">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.paperbox.</span></span><span class="sig-name descname"><span class="pre">PaperBox</span></span><a class="reference internal" href="_modules/boxes/generators/paperbox.html#PaperBox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.paperbox.PaperBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Box made of paper, with lid.</p>
+</dd></dl>
+
+<img alt="_images/PaperBox.jpg" src="_images/PaperBox.jpg" />
+</section>
+<section id="phoneholder">
+<h3><a class="toc-backref" href="#id120" role="doc-backlink">PhoneHolder</a><a class="headerlink" href="#phoneholder" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.phoneholder.PhoneHolder">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.phoneholder.</span></span><span class="sig-name descname"><span class="pre">PhoneHolder</span></span><a class="reference internal" href="_modules/boxes/generators/phoneholder.html#PhoneHolder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.phoneholder.PhoneHolder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Smartphone desk holder</p>
+</dd></dl>
+
+<img alt="_images/PhoneHolder.jpg" src="_images/PhoneHolder.jpg" />
+</section>
+<section id="polehook">
+<h3><a class="toc-backref" href="#id121" role="doc-backlink">PoleHook</a><a class="headerlink" href="#polehook" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.polehook.PoleHook">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.polehook.</span></span><span class="sig-name descname"><span class="pre">PoleHook</span></span><a class="reference internal" href="_modules/boxes/generators/polehook.html#PoleHook"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.polehook.PoleHook" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook for pole like things to be clamped to another pole</p>
+</dd></dl>
+
+</section>
+<section id="royalgame">
+<h3><a class="toc-backref" href="#id122" role="doc-backlink">RoyalGame</a><a class="headerlink" href="#royalgame" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.royalgame.RoyalGame">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.royalgame.</span></span><span class="sig-name descname"><span class="pre">RoyalGame</span></span><a class="reference internal" href="_modules/boxes/generators/royalgame.html#RoyalGame"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.royalgame.RoyalGame" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Royal Game of Ur</p>
+</dd></dl>
+
+<img alt="_images/RoyalGame.jpg" src="_images/RoyalGame.jpg" />
+</section>
+<section id="stachel">
+<h3><a class="toc-backref" href="#id123" role="doc-backlink">Stachel</a><a class="headerlink" href="#stachel" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.stachel.Stachel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.stachel.</span></span><span class="sig-name descname"><span class="pre">Stachel</span></span><a class="reference internal" href="_modules/boxes/generators/stachel.html#Stachel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.stachel.Stachel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bass Recorder Endpin</p>
+</dd></dl>
+
+<img alt="_images/Stachel.jpg" src="_images/Stachel.jpg" />
+</section>
+<section id="trafficlight">
+<h3><a class="toc-backref" href="#id124" role="doc-backlink">TrafficLight</a><a class="headerlink" href="#trafficlight" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.trafficlight.TrafficLight">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.trafficlight.</span></span><span class="sig-name descname"><span class="pre">TrafficLight</span></span><a class="reference internal" href="_modules/boxes/generators/trafficlight.html#TrafficLight"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.trafficlight.TrafficLight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Traffic light</p>
+</dd></dl>
+
+<img alt="_images/TrafficLight.jpg" src="_images/TrafficLight.jpg" />
+</section>
+<section id="trianglelamp">
+<h3><a class="toc-backref" href="#id125" role="doc-backlink">TriangleLamp</a><a class="headerlink" href="#trianglelamp" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.trianglelamp.TriangleLamp">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.trianglelamp.</span></span><span class="sig-name descname"><span class="pre">TriangleLamp</span></span><a class="reference internal" href="_modules/boxes/generators/trianglelamp.html#TriangleLamp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.trianglelamp.TriangleLamp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Triangle LED Lamp</p>
+</dd></dl>
+
+</section>
+</section>
+<section id="unstable">
+<h2><a class="toc-backref" href="#id126" role="doc-backlink">Unstable</a><a class="headerlink" href="#unstable" title="Permalink to this heading">¶</a></h2>
+<section id="birdhouse">
+<h3><a class="toc-backref" href="#id127" role="doc-backlink">BirdHouse</a><a class="headerlink" href="#birdhouse" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.birdhouse.BirdHouse">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.birdhouse.</span></span><span class="sig-name descname"><span class="pre">BirdHouse</span></span><a class="reference internal" href="_modules/boxes/generators/birdhouse.html#BirdHouse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.birdhouse.BirdHouse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simple Bird House</p>
+</dd></dl>
+
+</section>
+<section id="breadbox">
+<h3><a class="toc-backref" href="#id128" role="doc-backlink">BreadBox</a><a class="headerlink" href="#breadbox" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.breadbox.BreadBox">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.breadbox.</span></span><span class="sig-name descname"><span class="pre">BreadBox</span></span><a class="reference internal" href="_modules/boxes/generators/breadbox.html#BreadBox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.breadbox.BreadBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>A BreadBox with a gliding door</p>
+</dd></dl>
+
+</section>
+<section id="castle">
+<h3><a class="toc-backref" href="#id129" role="doc-backlink">Castle</a><a class="headerlink" href="#castle" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.castle.Castle">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.castle.</span></span><span class="sig-name descname"><span class="pre">Castle</span></span><a class="reference internal" href="_modules/boxes/generators/castle.html#Castle"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.castle.Castle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Castle tower with two walls</p>
+</dd></dl>
+
+<img alt="_images/Castle.jpg" src="_images/Castle.jpg" />
+</section>
+<section id="organpipe">
+<h3><a class="toc-backref" href="#id130" role="doc-backlink">OrganPipe</a><a class="headerlink" href="#organpipe" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.organpipe.OrganPipe">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.organpipe.</span></span><span class="sig-name descname"><span class="pre">OrganPipe</span></span><a class="reference internal" href="_modules/boxes/generators/organpipe.html#OrganPipe"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.organpipe.OrganPipe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rectangular organ pipe based on pipecalc</p>
+</dd></dl>
+
+</section>
+<section id="planetary2">
+<h3><a class="toc-backref" href="#id131" role="doc-backlink">Planetary2</a><a class="headerlink" href="#planetary2" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.planetary2.Planetary2">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.planetary2.</span></span><span class="sig-name descname"><span class="pre">Planetary2</span></span><a class="reference internal" href="_modules/boxes/generators/planetary2.html#Planetary2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.planetary2.Planetary2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Balanced force Difference Planetary Gear (not yet working properly)</p>
+</dd></dl>
+
+</section>
+<section id="platonic">
+<h3><a class="toc-backref" href="#id132" role="doc-backlink">Platonic</a><a class="headerlink" href="#platonic" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.platonic.Platonic">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.platonic.</span></span><span class="sig-name descname"><span class="pre">Platonic</span></span><a class="reference internal" href="_modules/boxes/generators/platonic.html#Platonic"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.platonic.Platonic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Platonic solids generator</p>
+</dd></dl>
+
+<img alt="_images/Platonic.jpg" src="_images/Platonic.jpg" />
+</section>
+<section id="rotary">
+<h3><a class="toc-backref" href="#id133" role="doc-backlink">Rotary</a><a class="headerlink" href="#rotary" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.rotary.Rotary">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.rotary.</span></span><span class="sig-name descname"><span class="pre">Rotary</span></span><a class="reference internal" href="_modules/boxes/generators/rotary.html#Rotary"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.rotary.Rotary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rotary Attachment for engraving cylindrical objects in a laser cutter</p>
+</dd></dl>
+
+<img alt="_images/Rotary.jpg" src="_images/Rotary.jpg" />
+</section>
+<section id="silverware">
+<h3><a class="toc-backref" href="#id134" role="doc-backlink">Silverware</a><a class="headerlink" href="#silverware" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="boxes.generators.silverwarebox.Silverware">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boxes.generators.silverwarebox.</span></span><span class="sig-name descname"><span class="pre">Silverware</span></span><a class="reference internal" href="_modules/boxes/generators/silverwarebox.html#Silverware"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#boxes.generators.silverwarebox.Silverware" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cuttlery stand with carrying grip
+using flex for rounded corners</p>
+</dd></dl>
+
+<img alt="_images/Silverware.jpg" src="_images/Silverware.jpg" />
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/boxes-logo.svg" alt="Logo"/>
+            </a></p>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">All Box Generators</a><ul>
+<li><a class="reference internal" href="#box">Box</a><ul>
+<li><a class="reference internal" href="#abox">ABox</a><ul>
+<li><a class="reference internal" href="#boxes.generators.abox.ABox"><code class="docutils literal notranslate"><span class="pre">ABox</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#angledbox">AngledBox</a><ul>
+<li><a class="reference internal" href="#boxes.generators.angledbox.AngledBox"><code class="docutils literal notranslate"><span class="pre">AngledBox</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#basedbox">BasedBox</a><ul>
+<li><a class="reference internal" href="#boxes.generators.basedbox.BasedBox"><code class="docutils literal notranslate"><span class="pre">BasedBox</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#bayonetbox">BayonetBox</a><ul>
+<li><a class="reference internal" href="#boxes.generators.bayonetbox.BayonetBox"><code class="docutils literal notranslate"><span class="pre">BayonetBox</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cardbox">CardBox</a><ul>
+<li><a class="reference internal" href="#boxes.generators.cardbox.CardBox"><code class="docutils literal notranslate"><span class="pre">CardBox</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#closedbox">ClosedBox</a><ul>
+<li><a class="reference internal" href="#boxes.generators.closedbox.ClosedBox"><code class="docutils literal notranslate"><span class="pre">ClosedBox</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#console">Console</a><ul>
+<li><a class="reference internal" href="#boxes.generators.console.Console"><code class="docutils literal notranslate"><span class="pre">Console</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#console2">Console2</a><ul>
+<li><a class="reference internal" href="#boxes.generators.console2.Console2"><code class="docutils literal notranslate"><span class="pre">Console2</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#dicebox">DiceBox</a><ul>
+<li><a class="reference internal" href="#boxes.generators.dicebox.DiceBox"><code class="docutils literal notranslate"><span class="pre">DiceBox</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#displaycase">DisplayCase</a><ul>
+<li><a class="reference internal" href="#boxes.generators.displaycase.DisplayCase"><code class="docutils literal notranslate"><span class="pre">DisplayCase</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#electronicsbox">ElectronicsBox</a><ul>
+<li><a class="reference internal" href="#boxes.generators.electronicsbox.ElectronicsBox"><code class="docutils literal notranslate"><span class="pre">ElectronicsBox</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#eurorackskiff">EuroRackSkiff</a><ul>
+<li><a class="reference internal" href="#boxes.generators.eurorackskiff.EuroRackSkiff"><code class="docutils literal notranslate"><span class="pre">EuroRackSkiff</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#halfbox">HalfBox</a><ul>
+<li><a class="reference internal" href="#boxes.generators.halfbox.HalfBox"><code class="docutils literal notranslate"><span class="pre">HalfBox</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#hingebox">HingeBox</a><ul>
+<li><a class="reference internal" href="#boxes.generators.hingebox.HingeBox"><code class="docutils literal notranslate"><span class="pre">HingeBox</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#integratedhingebox">IntegratedHingeBox</a><ul>
+<li><a class="reference internal" href="#boxes.generators.integratedhingebox.IntegratedHingeBox"><code class="docutils literal notranslate"><span class="pre">IntegratedHingeBox</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#keypad">Keypad</a><ul>
+<li><a class="reference internal" href="#boxes.generators.keypad.Keypad"><code class="docutils literal notranslate"><span class="pre">Keypad</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#notesholder">NotesHolder</a><ul>
+<li><a class="reference internal" href="#boxes.generators.notesholder.NotesHolder"><code class="docutils literal notranslate"><span class="pre">NotesHolder</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#openbox">OpenBox</a><ul>
+<li><a class="reference internal" href="#boxes.generators.openbox.OpenBox"><code class="docutils literal notranslate"><span class="pre">OpenBox</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rack10box">Rack10Box</a><ul>
+<li><a class="reference internal" href="#boxes.generators.rack10box.Rack10Box"><code class="docutils literal notranslate"><span class="pre">Rack10Box</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rack19box">Rack19Box</a><ul>
+<li><a class="reference internal" href="#boxes.generators.rack19box.Rack19Box"><code class="docutils literal notranslate"><span class="pre">Rack19Box</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rack19halfwidth">Rack19HalfWidth</a><ul>
+<li><a class="reference internal" href="#boxes.generators.rack19halfwidth.Rack19HalfWidth"><code class="docutils literal notranslate"><span class="pre">Rack19HalfWidth</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rackbox">RackBox</a><ul>
+<li><a class="reference internal" href="#boxes.generators.rackbox.RackBox"><code class="docutils literal notranslate"><span class="pre">RackBox</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#regularbox">RegularBox</a><ul>
+<li><a class="reference internal" href="#boxes.generators.regularbox.RegularBox"><code class="docutils literal notranslate"><span class="pre">RegularBox</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#regularstarbox">RegularStarBox</a><ul>
+<li><a class="reference internal" href="#boxes.generators.regularstarbox.RegularStarBox"><code class="docutils literal notranslate"><span class="pre">RegularStarBox</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#sidedoorhousing">SideDoorHousing</a><ul>
+<li><a class="reference internal" href="#boxes.generators.sidedoorhousing.SideDoorHousing"><code class="docutils literal notranslate"><span class="pre">SideDoorHousing</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#slidingdrawer">SlidingDrawer</a><ul>
+<li><a class="reference internal" href="#boxes.generators.slidingdrawer.SlidingDrawer"><code class="docutils literal notranslate"><span class="pre">SlidingDrawer</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#twopiece">TwoPiece</a><ul>
+<li><a class="reference internal" href="#boxes.generators.two_piece.TwoPiece"><code class="docutils literal notranslate"><span class="pre">TwoPiece</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#unevenheightbox">UnevenHeightBox</a><ul>
+<li><a class="reference internal" href="#boxes.generators.unevenheightbox.UnevenHeightBox"><code class="docutils literal notranslate"><span class="pre">UnevenHeightBox</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#universalbox">UniversalBox</a><ul>
+<li><a class="reference internal" href="#boxes.generators.universalbox.UniversalBox"><code class="docutils literal notranslate"><span class="pre">UniversalBox</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#flexbox">FlexBox</a><ul>
+<li><a class="reference internal" href="#doubleflexdoorbox">DoubleFlexDoorBox</a><ul>
+<li><a class="reference internal" href="#boxes.generators.doubleflexdoorbox.DoubleFlexDoorBox"><code class="docutils literal notranslate"><span class="pre">DoubleFlexDoorBox</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id1">FlexBox</a><ul>
+<li><a class="reference internal" href="#boxes.generators.flexbox.FlexBox"><code class="docutils literal notranslate"><span class="pre">FlexBox</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#flexbox2">FlexBox2</a><ul>
+<li><a class="reference internal" href="#boxes.generators.flexbox2.FlexBox2"><code class="docutils literal notranslate"><span class="pre">FlexBox2</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#flexbox3">FlexBox3</a><ul>
+<li><a class="reference internal" href="#boxes.generators.flexbox3.FlexBox3"><code class="docutils literal notranslate"><span class="pre">FlexBox3</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#flexbox4">FlexBox4</a><ul>
+<li><a class="reference internal" href="#boxes.generators.flexbox4.FlexBox4"><code class="docutils literal notranslate"><span class="pre">FlexBox4</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#flexbox5">FlexBox5</a><ul>
+<li><a class="reference internal" href="#boxes.generators.flexbox5.FlexBox5"><code class="docutils literal notranslate"><span class="pre">FlexBox5</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#heartbox">HeartBox</a><ul>
+<li><a class="reference internal" href="#boxes.generators.heart.HeartBox"><code class="docutils literal notranslate"><span class="pre">HeartBox</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#roundedbox">RoundedBox</a><ul>
+<li><a class="reference internal" href="#boxes.generators.roundedbox.RoundedBox"><code class="docutils literal notranslate"><span class="pre">RoundedBox</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#shutterbox">ShutterBox</a><ul>
+<li><a class="reference internal" href="#boxes.generators.shutterbox.ShutterBox"><code class="docutils literal notranslate"><span class="pre">ShutterBox</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ubox">UBox</a><ul>
+<li><a class="reference internal" href="#boxes.generators.ubox.UBox"><code class="docutils literal notranslate"><span class="pre">UBox</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#tray">Tray</a><ul>
+<li><a class="reference internal" href="#dividertray">DividerTray</a><ul>
+<li><a class="reference internal" href="#boxes.generators.dividertray.DividerTray"><code class="docutils literal notranslate"><span class="pre">DividerTray</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#drillbox">DrillBox</a><ul>
+<li><a class="reference internal" href="#boxes.generators.drillbox.DrillBox"><code class="docutils literal notranslate"><span class="pre">DrillBox</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#trayinsert">TrayInsert</a><ul>
+<li><a class="reference internal" href="#boxes.generators.trayinsert.TrayInsert"><code class="docutils literal notranslate"><span class="pre">TrayInsert</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#traylayout">TrayLayout</a><ul>
+<li><a class="reference internal" href="#boxes.generators.traylayout.TrayLayout"><code class="docutils literal notranslate"><span class="pre">TrayLayout</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#traylayout2">TrayLayout2</a><ul>
+<li><a class="reference internal" href="#boxes.generators.traylayout.TrayLayout2"><code class="docutils literal notranslate"><span class="pre">TrayLayout2</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#typetray">TypeTray</a><ul>
+<li><a class="reference internal" href="#boxes.generators.typetray.TypeTray"><code class="docutils literal notranslate"><span class="pre">TypeTray</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#shelf">Shelf</a><ul>
+<li><a class="reference internal" href="#bintray">BinTray</a><ul>
+<li><a class="reference internal" href="#boxes.generators.bintray.BinTray"><code class="docutils literal notranslate"><span class="pre">BinTray</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cardholder">CardHolder</a><ul>
+<li><a class="reference internal" href="#boxes.generators.cardholder.CardHolder"><code class="docutils literal notranslate"><span class="pre">CardHolder</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#discrack">DiscRack</a><ul>
+<li><a class="reference internal" href="#boxes.generators.discrack.DiscRack"><code class="docutils literal notranslate"><span class="pre">DiscRack</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#displayshelf">DisplayShelf</a><ul>
+<li><a class="reference internal" href="#boxes.generators.displayshelf.DisplayShelf"><code class="docutils literal notranslate"><span class="pre">DisplayShelf</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#paintstorage">PaintStorage</a><ul>
+<li><a class="reference internal" href="#boxes.generators.paintbox.PaintStorage"><code class="docutils literal notranslate"><span class="pre">PaintStorage</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#sbcmicrorack">SBCMicroRack</a><ul>
+<li><a class="reference internal" href="#boxes.generators.microrack.SBCMicroRack"><code class="docutils literal notranslate"><span class="pre">SBCMicroRack</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#spicesrack">SpicesRack</a><ul>
+<li><a class="reference internal" href="#boxes.generators.spicesrack.SpicesRack"><code class="docutils literal notranslate"><span class="pre">SpicesRack</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#storagerack">StorageRack</a><ul>
+<li><a class="reference internal" href="#boxes.generators.storagerack.StorageRack"><code class="docutils literal notranslate"><span class="pre">StorageRack</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#storageshelf">StorageShelf</a><ul>
+<li><a class="reference internal" href="#boxes.generators.storageshelf.StorageShelf"><code class="docutils literal notranslate"><span class="pre">StorageShelf</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#winerack">WineRack</a><ul>
+<li><a class="reference internal" href="#boxes.generators.winerack.WineRack"><code class="docutils literal notranslate"><span class="pre">WineRack</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#wallmounted">WallMounted</a><ul>
+<li><a class="reference internal" href="#dinrailbox">DinRailBox</a><ul>
+<li><a class="reference internal" href="#boxes.generators.dinrailbox.DinRailBox"><code class="docutils literal notranslate"><span class="pre">DinRailBox</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#wallcaliper">WallCaliper</a><ul>
+<li><a class="reference internal" href="#boxes.generators.wallcaliperholder.WallCaliper"><code class="docutils literal notranslate"><span class="pre">WallCaliper</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#wallchiselholder">WallChiselHolder</a><ul>
+<li><a class="reference internal" href="#boxes.generators.wallchiselholder.WallChiselHolder"><code class="docutils literal notranslate"><span class="pre">WallChiselHolder</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#wallconsole">WallConsole</a><ul>
+<li><a class="reference internal" href="#boxes.generators.wallconsole.WallConsole"><code class="docutils literal notranslate"><span class="pre">WallConsole</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#walldrillbox">WallDrillBox</a><ul>
+<li><a class="reference internal" href="#boxes.generators.walldrillbox.WallDrillBox"><code class="docutils literal notranslate"><span class="pre">WallDrillBox</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#walledges">WallEdges</a><ul>
+<li><a class="reference internal" href="#boxes.generators.walledges.WallEdges"><code class="docutils literal notranslate"><span class="pre">WallEdges</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#wallpinrow">WallPinRow</a><ul>
+<li><a class="reference internal" href="#boxes.generators.wallpinrow.WallPinRow"><code class="docutils literal notranslate"><span class="pre">WallPinRow</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#wallplaneholder">WallPlaneHolder</a><ul>
+<li><a class="reference internal" href="#boxes.generators.wallplaneholder.WallPlaneHolder"><code class="docutils literal notranslate"><span class="pre">WallPlaneHolder</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#wallpliersholder">WallPliersHolder</a><ul>
+<li><a class="reference internal" href="#boxes.generators.wallpliersholder.WallPliersHolder"><code class="docutils literal notranslate"><span class="pre">WallPliersHolder</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#wallslottedholder">WallSlottedHolder</a><ul>
+<li><a class="reference internal" href="#boxes.generators.wallslottedholder.WallSlottedHolder"><code class="docutils literal notranslate"><span class="pre">WallSlottedHolder</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#wallstairs">WallStairs</a><ul>
+<li><a class="reference internal" href="#boxes.generators.wallstairs.WallStairs"><code class="docutils literal notranslate"><span class="pre">WallStairs</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#walltypetray">WallTypeTray</a><ul>
+<li><a class="reference internal" href="#boxes.generators.walltypetray.WallTypeTray"><code class="docutils literal notranslate"><span class="pre">WallTypeTray</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#wallwrenchholder">WallWrenchHolder</a><ul>
+<li><a class="reference internal" href="#boxes.generators.wallwrenchholder.WallWrenchHolder"><code class="docutils literal notranslate"><span class="pre">WallWrenchHolder</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#holes">Holes</a><ul>
+<li><a class="reference internal" href="#fanhole">FanHole</a><ul>
+<li><a class="reference internal" href="#boxes.generators.fanhole.FanHole"><code class="docutils literal notranslate"><span class="pre">FanHole</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#holepattern">HolePattern</a><ul>
+<li><a class="reference internal" href="#boxes.generators.holepattern.HolePattern"><code class="docutils literal notranslate"><span class="pre">HolePattern</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#nemapattern">NemaPattern</a><ul>
+<li><a class="reference internal" href="#boxes.generators.nemapattern.NemaPattern"><code class="docutils literal notranslate"><span class="pre">NemaPattern</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#part">Part</a><ul>
+<li><a class="reference internal" href="#burntest">BurnTest</a><ul>
+<li><a class="reference internal" href="#boxes.generators.burntest.BurnTest"><code class="docutils literal notranslate"><span class="pre">BurnTest</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#concaveknob">ConcaveKnob</a><ul>
+<li><a class="reference internal" href="#boxes.generators.concaveknob.ConcaveKnob"><code class="docutils literal notranslate"><span class="pre">ConcaveKnob</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#filltest">FillTest</a><ul>
+<li><a class="reference internal" href="#boxes.generators.filltest.FillTest"><code class="docutils literal notranslate"><span class="pre">FillTest</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#flextest">FlexTest</a><ul>
+<li><a class="reference internal" href="#boxes.generators.flextest.FlexTest"><code class="docutils literal notranslate"><span class="pre">FlexTest</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#flextest2">FlexTest2</a><ul>
+<li><a class="reference internal" href="#boxes.generators.flextest2.FlexTest2"><code class="docutils literal notranslate"><span class="pre">FlexTest2</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#gearbox">GearBox</a><ul>
+<li><a class="reference internal" href="#boxes.generators.gearbox.GearBox"><code class="docutils literal notranslate"><span class="pre">GearBox</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#gears">Gears</a><ul>
+<li><a class="reference internal" href="#boxes.generators.gear.Gears"><code class="docutils literal notranslate"><span class="pre">Gears</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#lbeam">LBeam</a><ul>
+<li><a class="reference internal" href="#boxes.generators.lbeam.LBeam"><code class="docutils literal notranslate"><span class="pre">LBeam</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#laserholdfast">LaserHoldfast</a><ul>
+<li><a class="reference internal" href="#boxes.generators.laserholdfast.LaserHoldfast"><code class="docutils literal notranslate"><span class="pre">LaserHoldfast</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#nemamount">NemaMount</a><ul>
+<li><a class="reference internal" href="#boxes.generators.nemamount.NemaMount"><code class="docutils literal notranslate"><span class="pre">NemaMount</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#planetary">Planetary</a><ul>
+<li><a class="reference internal" href="#boxes.generators.planetary.Planetary"><code class="docutils literal notranslate"><span class="pre">Planetary</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pulley">Pulley</a><ul>
+<li><a class="reference internal" href="#boxes.generators.pulley.Pulley"><code class="docutils literal notranslate"><span class="pre">Pulley</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rectangularwall">RectangularWall</a><ul>
+<li><a class="reference internal" href="#boxes.generators.rectangularWall.RectangularWall"><code class="docutils literal notranslate"><span class="pre">RectangularWall</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#robotarm">RobotArm</a><ul>
+<li><a class="reference internal" href="#boxes.generators.robotarm.RobotArm"><code class="docutils literal notranslate"><span class="pre">RobotArm</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#waivyknob">WaivyKnob</a><ul>
+<li><a class="reference internal" href="#boxes.generators.waivyknob.WaivyKnob"><code class="docutils literal notranslate"><span class="pre">WaivyKnob</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#misc">Misc</a><ul>
+<li><a class="reference internal" href="#agricolainsert">AgricolaInsert</a><ul>
+<li><a class="reference internal" href="#boxes.generators.agricolainsert.AgricolaInsert"><code class="docutils literal notranslate"><span class="pre">AgricolaInsert</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#alledges">AllEdges</a><ul>
+<li><a class="reference internal" href="#boxes.generators.alledges.AllEdges"><code class="docutils literal notranslate"><span class="pre">AllEdges</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#angledcutjig">AngledCutJig</a><ul>
+<li><a class="reference internal" href="#boxes.generators.angledcutjig.AngledCutJig"><code class="docutils literal notranslate"><span class="pre">AngledCutJig</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#arcade">Arcade</a><ul>
+<li><a class="reference internal" href="#boxes.generators.arcade.Arcade"><code class="docutils literal notranslate"><span class="pre">Arcade</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#atreus21">Atreus21</a><ul>
+<li><a class="reference internal" href="#boxes.generators.atreus21.Atreus21"><code class="docutils literal notranslate"><span class="pre">Atreus21</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#bottlestack">BottleStack</a><ul>
+<li><a class="reference internal" href="#boxes.generators.bottlestack.BottleStack"><code class="docutils literal notranslate"><span class="pre">BottleStack</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#bottletag">BottleTag</a><ul>
+<li><a class="reference internal" href="#boxes.generators.bottletag.BottleTag"><code class="docutils literal notranslate"><span class="pre">BottleTag</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#canstorage">CanStorage</a><ul>
+<li><a class="reference internal" href="#boxes.generators.can_storage.CanStorage"><code class="docutils literal notranslate"><span class="pre">CanStorage</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#coffeecapsuleholder">CoffeeCapsuleHolder</a><ul>
+<li><a class="reference internal" href="#boxes.generators.coffeecapsulesholder.CoffeeCapsuleHolder"><code class="docutils literal notranslate"><span class="pre">CoffeeCapsuleHolder</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#coindisplay">CoinDisplay</a><ul>
+<li><a class="reference internal" href="#boxes.generators.coindisplay.CoinDisplay"><code class="docutils literal notranslate"><span class="pre">CoinDisplay</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#dispenser">Dispenser</a><ul>
+<li><a class="reference internal" href="#boxes.generators.dispenser.Dispenser"><code class="docutils literal notranslate"><span class="pre">Dispenser</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#display">Display</a><ul>
+<li><a class="reference internal" href="#boxes.generators.display.Display"><code class="docutils literal notranslate"><span class="pre">Display</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#drillstand">DrillStand</a><ul>
+<li><a class="reference internal" href="#boxes.generators.drillstand.DrillStand"><code class="docutils literal notranslate"><span class="pre">DrillStand</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#folder">Folder</a><ul>
+<li><a class="reference internal" href="#boxes.generators.folder.Folder"><code class="docutils literal notranslate"><span class="pre">Folder</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#hook">Hook</a><ul>
+<li><a class="reference internal" href="#boxes.generators.hooks.Hook"><code class="docutils literal notranslate"><span class="pre">Hook</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#jointpanel">JointPanel</a><ul>
+<li><a class="reference internal" href="#boxes.generators.jointpanel.JointPanel"><code class="docutils literal notranslate"><span class="pre">JointPanel</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#laptopstand">LaptopStand</a><ul>
+<li><a class="reference internal" href="#boxes.generators.laptopstand.LaptopStand"><code class="docutils literal notranslate"><span class="pre">LaptopStand</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#laserclamp">LaserClamp</a><ul>
+<li><a class="reference internal" href="#boxes.generators.laserclamp.LaserClamp"><code class="docutils literal notranslate"><span class="pre">LaserClamp</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#magazinfile">MagazinFile</a><ul>
+<li><a class="reference internal" href="#boxes.generators.magazinefile.MagazinFile"><code class="docutils literal notranslate"><span class="pre">MagazinFile</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#makitapowersupply">MakitaPowerSupply</a><ul>
+<li><a class="reference internal" href="#boxes.generators.makitapowersupply.MakitaPowerSupply"><code class="docutils literal notranslate"><span class="pre">MakitaPowerSupply</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ottobody">OttoBody</a><ul>
+<li><a class="reference internal" href="#boxes.generators.ottobody.OttoBody"><code class="docutils literal notranslate"><span class="pre">OttoBody</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ottolegs">OttoLegs</a><ul>
+<li><a class="reference internal" href="#boxes.generators.ottolegs.OttoLegs"><code class="docutils literal notranslate"><span class="pre">OttoLegs</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ottosoles">OttoSoles</a><ul>
+<li><a class="reference internal" href="#boxes.generators.ottosoles.OttoSoles"><code class="docutils literal notranslate"><span class="pre">OttoSoles</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#paperbox">PaperBox</a><ul>
+<li><a class="reference internal" href="#boxes.generators.paperbox.PaperBox"><code class="docutils literal notranslate"><span class="pre">PaperBox</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#phoneholder">PhoneHolder</a><ul>
+<li><a class="reference internal" href="#boxes.generators.phoneholder.PhoneHolder"><code class="docutils literal notranslate"><span class="pre">PhoneHolder</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#polehook">PoleHook</a><ul>
+<li><a class="reference internal" href="#boxes.generators.polehook.PoleHook"><code class="docutils literal notranslate"><span class="pre">PoleHook</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#royalgame">RoyalGame</a><ul>
+<li><a class="reference internal" href="#boxes.generators.royalgame.RoyalGame"><code class="docutils literal notranslate"><span class="pre">RoyalGame</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#stachel">Stachel</a><ul>
+<li><a class="reference internal" href="#boxes.generators.stachel.Stachel"><code class="docutils literal notranslate"><span class="pre">Stachel</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#trafficlight">TrafficLight</a><ul>
+<li><a class="reference internal" href="#boxes.generators.trafficlight.TrafficLight"><code class="docutils literal notranslate"><span class="pre">TrafficLight</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#trianglelamp">TriangleLamp</a><ul>
+<li><a class="reference internal" href="#boxes.generators.trianglelamp.TriangleLamp"><code class="docutils literal notranslate"><span class="pre">TriangleLamp</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#unstable">Unstable</a><ul>
+<li><a class="reference internal" href="#birdhouse">BirdHouse</a><ul>
+<li><a class="reference internal" href="#boxes.generators.birdhouse.BirdHouse"><code class="docutils literal notranslate"><span class="pre">BirdHouse</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#breadbox">BreadBox</a><ul>
+<li><a class="reference internal" href="#boxes.generators.breadbox.BreadBox"><code class="docutils literal notranslate"><span class="pre">BreadBox</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#castle">Castle</a><ul>
+<li><a class="reference internal" href="#boxes.generators.castle.Castle"><code class="docutils literal notranslate"><span class="pre">Castle</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#organpipe">OrganPipe</a><ul>
+<li><a class="reference internal" href="#boxes.generators.organpipe.OrganPipe"><code class="docutils literal notranslate"><span class="pre">OrganPipe</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#planetary2">Planetary2</a><ul>
+<li><a class="reference internal" href="#boxes.generators.planetary2.Planetary2"><code class="docutils literal notranslate"><span class="pre">Planetary2</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#platonic">Platonic</a><ul>
+<li><a class="reference internal" href="#boxes.generators.platonic.Platonic"><code class="docutils literal notranslate"><span class="pre">Platonic</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rotary">Rotary</a><ul>
+<li><a class="reference internal" href="#boxes.generators.rotary.Rotary"><code class="docutils literal notranslate"><span class="pre">Rotary</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#silverware">Silverware</a><ul>
+<li><a class="reference internal" href="#boxes.generators.silverwarebox.Silverware"><code class="docutils literal notranslate"><span class="pre">Silverware</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="api_examples.html"
+                          title="previous chapter">Examples</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/generators.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="api_examples.html" title="Examples"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">boxes.py 0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">All Box Generators</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, Florian Festi.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+  </body>
+</html>

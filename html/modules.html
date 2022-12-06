@@ -1,0 +1,804 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>boxes &#8212; boxes.py 0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/nature.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">boxes.py 0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">boxes</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="boxes">
+<h1>boxes<a class="headerlink" href="#boxes" title="Permalink to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="boxes.html">boxes package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="boxes.html#module-boxes.generators">Subpackage boxes.generators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.generators.UIGroup"><code class="docutils literal notranslate"><span class="pre">UIGroup</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.generators.UIGroup.add"><code class="docutils literal notranslate"><span class="pre">UIGroup.add()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.generators.UIGroup.image"><code class="docutils literal notranslate"><span class="pre">UIGroup.image</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.generators.UIGroup.thumbnail"><code class="docutils literal notranslate"><span class="pre">UIGroup.thumbnail</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.generators.getAllBoxGenerators"><code class="docutils literal notranslate"><span class="pre">getAllBoxGenerators()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.generators.getAllGeneratorModules"><code class="docutils literal notranslate"><span class="pre">getAllGeneratorModules()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="boxes.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="boxes.html#module-boxes.Color">boxes.Color module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.Color.Color"><code class="docutils literal notranslate"><span class="pre">Color</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Color.Color.ANNOTATIONS"><code class="docutils literal notranslate"><span class="pre">Color.ANNOTATIONS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Color.Color.BLACK"><code class="docutils literal notranslate"><span class="pre">Color.BLACK</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Color.Color.BLUE"><code class="docutils literal notranslate"><span class="pre">Color.BLUE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Color.Color.CYAN"><code class="docutils literal notranslate"><span class="pre">Color.CYAN</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Color.Color.ETCHING"><code class="docutils literal notranslate"><span class="pre">Color.ETCHING</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Color.Color.ETCHING_DEEP"><code class="docutils literal notranslate"><span class="pre">Color.ETCHING_DEEP</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Color.Color.GREEN"><code class="docutils literal notranslate"><span class="pre">Color.GREEN</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Color.Color.INNER_CUT"><code class="docutils literal notranslate"><span class="pre">Color.INNER_CUT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Color.Color.MAGENTA"><code class="docutils literal notranslate"><span class="pre">Color.MAGENTA</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Color.Color.OUTER_CUT"><code class="docutils literal notranslate"><span class="pre">Color.OUTER_CUT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Color.Color.RED"><code class="docutils literal notranslate"><span class="pre">Color.RED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Color.Color.WHITE"><code class="docutils literal notranslate"><span class="pre">Color.WHITE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Color.Color.YELLOW"><code class="docutils literal notranslate"><span class="pre">Color.YELLOW</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="boxes.html#module-boxes.edges">boxes.edges module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.BaseEdge"><code class="docutils literal notranslate"><span class="pre">BaseEdge</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.BaseEdge.char"><code class="docutils literal notranslate"><span class="pre">BaseEdge.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.BaseEdge.description"><code class="docutils literal notranslate"><span class="pre">BaseEdge.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.BaseEdge.endAngle"><code class="docutils literal notranslate"><span class="pre">BaseEdge.endAngle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.BaseEdge.endwidth"><code class="docutils literal notranslate"><span class="pre">BaseEdge.endwidth()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.BaseEdge.margin"><code class="docutils literal notranslate"><span class="pre">BaseEdge.margin()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.BaseEdge.spacing"><code class="docutils literal notranslate"><span class="pre">BaseEdge.spacing()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.BaseEdge.startAngle"><code class="docutils literal notranslate"><span class="pre">BaseEdge.startAngle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.BaseEdge.startwidth"><code class="docutils literal notranslate"><span class="pre">BaseEdge.startwidth()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.BoltPolicy"><code class="docutils literal notranslate"><span class="pre">BoltPolicy</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.BoltPolicy.drawbolt"><code class="docutils literal notranslate"><span class="pre">BoltPolicy.drawbolt()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.BoltPolicy.numFingers"><code class="docutils literal notranslate"><span class="pre">BoltPolicy.numFingers()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.Bolts"><code class="docutils literal notranslate"><span class="pre">Bolts</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.Bolts.drawBolt"><code class="docutils literal notranslate"><span class="pre">Bolts.drawBolt()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.Bolts.numFingers"><code class="docutils literal notranslate"><span class="pre">Bolts.numFingers()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.CabinetHingeEdge"><code class="docutils literal notranslate"><span class="pre">CabinetHingeEdge</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.CabinetHingeEdge.char"><code class="docutils literal notranslate"><span class="pre">CabinetHingeEdge.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.CabinetHingeEdge.description"><code class="docutils literal notranslate"><span class="pre">CabinetHingeEdge.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.CabinetHingeEdge.parts"><code class="docutils literal notranslate"><span class="pre">CabinetHingeEdge.parts()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.CabinetHingeEdge.startwidth"><code class="docutils literal notranslate"><span class="pre">CabinetHingeEdge.startwidth()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.CabinetHingeSettings"><code class="docutils literal notranslate"><span class="pre">CabinetHingeSettings</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.CabinetHingeSettings.absolute_params"><code class="docutils literal notranslate"><span class="pre">CabinetHingeSettings.absolute_params</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.CabinetHingeSettings.edgeObjects"><code class="docutils literal notranslate"><span class="pre">CabinetHingeSettings.edgeObjects()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.CabinetHingeSettings.relative_params"><code class="docutils literal notranslate"><span class="pre">CabinetHingeSettings.relative_params</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.ChestHinge"><code class="docutils literal notranslate"><span class="pre">ChestHinge</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.ChestHinge.char"><code class="docutils literal notranslate"><span class="pre">ChestHinge.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.ChestHinge.description"><code class="docutils literal notranslate"><span class="pre">ChestHinge.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.ChestHinge.endwidth"><code class="docutils literal notranslate"><span class="pre">ChestHinge.endwidth()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.ChestHinge.margin"><code class="docutils literal notranslate"><span class="pre">ChestHinge.margin()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.ChestHinge.startwidth"><code class="docutils literal notranslate"><span class="pre">ChestHinge.startwidth()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.ChestHingeFront"><code class="docutils literal notranslate"><span class="pre">ChestHingeFront</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.ChestHingeFront.char"><code class="docutils literal notranslate"><span class="pre">ChestHingeFront.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.ChestHingeFront.description"><code class="docutils literal notranslate"><span class="pre">ChestHingeFront.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.ChestHingeFront.startwidth"><code class="docutils literal notranslate"><span class="pre">ChestHingeFront.startwidth()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.ChestHingePin"><code class="docutils literal notranslate"><span class="pre">ChestHingePin</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.ChestHingePin.char"><code class="docutils literal notranslate"><span class="pre">ChestHingePin.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.ChestHingePin.description"><code class="docutils literal notranslate"><span class="pre">ChestHingePin.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.ChestHingePin.margin"><code class="docutils literal notranslate"><span class="pre">ChestHingePin.margin()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.ChestHingeSettings"><code class="docutils literal notranslate"><span class="pre">ChestHingeSettings</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.ChestHingeSettings.absolute_params"><code class="docutils literal notranslate"><span class="pre">ChestHingeSettings.absolute_params</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.ChestHingeSettings.checkValues"><code class="docutils literal notranslate"><span class="pre">ChestHingeSettings.checkValues()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.ChestHingeSettings.edgeObjects"><code class="docutils literal notranslate"><span class="pre">ChestHingeSettings.edgeObjects()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.ChestHingeSettings.pinheight"><code class="docutils literal notranslate"><span class="pre">ChestHingeSettings.pinheight()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.ChestHingeSettings.relative_params"><code class="docutils literal notranslate"><span class="pre">ChestHingeSettings.relative_params</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.ChestHingeTop"><code class="docutils literal notranslate"><span class="pre">ChestHingeTop</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.ChestHingeTop.char"><code class="docutils literal notranslate"><span class="pre">ChestHingeTop.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.ChestHingeTop.endwidth"><code class="docutils literal notranslate"><span class="pre">ChestHingeTop.endwidth()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.ChestHingeTop.margin"><code class="docutils literal notranslate"><span class="pre">ChestHingeTop.margin()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.ChestHingeTop.startwidth"><code class="docutils literal notranslate"><span class="pre">ChestHingeTop.startwidth()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.ClickConnector"><code class="docutils literal notranslate"><span class="pre">ClickConnector</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.ClickConnector.char"><code class="docutils literal notranslate"><span class="pre">ClickConnector.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.ClickConnector.description"><code class="docutils literal notranslate"><span class="pre">ClickConnector.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.ClickConnector.finger"><code class="docutils literal notranslate"><span class="pre">ClickConnector.finger()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.ClickConnector.hook"><code class="docutils literal notranslate"><span class="pre">ClickConnector.hook()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.ClickConnector.hookOffset"><code class="docutils literal notranslate"><span class="pre">ClickConnector.hookOffset()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.ClickConnector.hookWidth"><code class="docutils literal notranslate"><span class="pre">ClickConnector.hookWidth()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.ClickConnector.margin"><code class="docutils literal notranslate"><span class="pre">ClickConnector.margin()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.ClickEdge"><code class="docutils literal notranslate"><span class="pre">ClickEdge</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.ClickEdge.char"><code class="docutils literal notranslate"><span class="pre">ClickEdge.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.ClickEdge.description"><code class="docutils literal notranslate"><span class="pre">ClickEdge.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.ClickEdge.margin"><code class="docutils literal notranslate"><span class="pre">ClickEdge.margin()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.ClickEdge.startwidth"><code class="docutils literal notranslate"><span class="pre">ClickEdge.startwidth()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.ClickSettings"><code class="docutils literal notranslate"><span class="pre">ClickSettings</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.ClickSettings.absolute_params"><code class="docutils literal notranslate"><span class="pre">ClickSettings.absolute_params</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.ClickSettings.edgeObjects"><code class="docutils literal notranslate"><span class="pre">ClickSettings.edgeObjects()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.ClickSettings.relative_params"><code class="docutils literal notranslate"><span class="pre">ClickSettings.relative_params</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.CompoundEdge"><code class="docutils literal notranslate"><span class="pre">CompoundEdge</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.CompoundEdge.description"><code class="docutils literal notranslate"><span class="pre">CompoundEdge.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.CompoundEdge.endwidth"><code class="docutils literal notranslate"><span class="pre">CompoundEdge.endwidth()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.CompoundEdge.margin"><code class="docutils literal notranslate"><span class="pre">CompoundEdge.margin()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.CompoundEdge.startwidth"><code class="docutils literal notranslate"><span class="pre">CompoundEdge.startwidth()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.CrossingFingerHoleEdge"><code class="docutils literal notranslate"><span class="pre">CrossingFingerHoleEdge</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.CrossingFingerHoleEdge.char"><code class="docutils literal notranslate"><span class="pre">CrossingFingerHoleEdge.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.CrossingFingerHoleEdge.description"><code class="docutils literal notranslate"><span class="pre">CrossingFingerHoleEdge.description</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.DoveTailJoint"><code class="docutils literal notranslate"><span class="pre">DoveTailJoint</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.DoveTailJoint.char"><code class="docutils literal notranslate"><span class="pre">DoveTailJoint.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.DoveTailJoint.description"><code class="docutils literal notranslate"><span class="pre">DoveTailJoint.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.DoveTailJoint.margin"><code class="docutils literal notranslate"><span class="pre">DoveTailJoint.margin()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.DoveTailJoint.positive"><code class="docutils literal notranslate"><span class="pre">DoveTailJoint.positive</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.DoveTailJointCounterPart"><code class="docutils literal notranslate"><span class="pre">DoveTailJointCounterPart</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.DoveTailJointCounterPart.char"><code class="docutils literal notranslate"><span class="pre">DoveTailJointCounterPart.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.DoveTailJointCounterPart.description"><code class="docutils literal notranslate"><span class="pre">DoveTailJointCounterPart.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.DoveTailJointCounterPart.margin"><code class="docutils literal notranslate"><span class="pre">DoveTailJointCounterPart.margin()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.DoveTailJointCounterPart.positive"><code class="docutils literal notranslate"><span class="pre">DoveTailJointCounterPart.positive</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.DoveTailSettings"><code class="docutils literal notranslate"><span class="pre">DoveTailSettings</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.DoveTailSettings.absolute_params"><code class="docutils literal notranslate"><span class="pre">DoveTailSettings.absolute_params</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.DoveTailSettings.edgeObjects"><code class="docutils literal notranslate"><span class="pre">DoveTailSettings.edgeObjects()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.DoveTailSettings.relative_params"><code class="docutils literal notranslate"><span class="pre">DoveTailSettings.relative_params</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.Edge"><code class="docutils literal notranslate"><span class="pre">Edge</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.Edge.char"><code class="docutils literal notranslate"><span class="pre">Edge.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.Edge.description"><code class="docutils literal notranslate"><span class="pre">Edge.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.Edge.positive"><code class="docutils literal notranslate"><span class="pre">Edge.positive</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.FingerHoleEdge"><code class="docutils literal notranslate"><span class="pre">FingerHoleEdge</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.FingerHoleEdge.char"><code class="docutils literal notranslate"><span class="pre">FingerHoleEdge.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.FingerHoleEdge.description"><code class="docutils literal notranslate"><span class="pre">FingerHoleEdge.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.FingerHoleEdge.startwidth"><code class="docutils literal notranslate"><span class="pre">FingerHoleEdge.startwidth()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.FingerHoles"><code class="docutils literal notranslate"><span class="pre">FingerHoles</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.FingerJointBase"><code class="docutils literal notranslate"><span class="pre">FingerJointBase</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.FingerJointBase.calcFingers"><code class="docutils literal notranslate"><span class="pre">FingerJointBase.calcFingers()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.FingerJointBase.fingerLength"><code class="docutils literal notranslate"><span class="pre">FingerJointBase.fingerLength()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.FingerJointEdge"><code class="docutils literal notranslate"><span class="pre">FingerJointEdge</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.FingerJointEdge.char"><code class="docutils literal notranslate"><span class="pre">FingerJointEdge.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.FingerJointEdge.description"><code class="docutils literal notranslate"><span class="pre">FingerJointEdge.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.FingerJointEdge.draw_finger"><code class="docutils literal notranslate"><span class="pre">FingerJointEdge.draw_finger()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.FingerJointEdge.margin"><code class="docutils literal notranslate"><span class="pre">FingerJointEdge.margin()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.FingerJointEdge.positive"><code class="docutils literal notranslate"><span class="pre">FingerJointEdge.positive</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.FingerJointEdge.startwidth"><code class="docutils literal notranslate"><span class="pre">FingerJointEdge.startwidth()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.FingerJointEdgeCounterPart"><code class="docutils literal notranslate"><span class="pre">FingerJointEdgeCounterPart</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.FingerJointEdgeCounterPart.char"><code class="docutils literal notranslate"><span class="pre">FingerJointEdgeCounterPart.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.FingerJointEdgeCounterPart.description"><code class="docutils literal notranslate"><span class="pre">FingerJointEdgeCounterPart.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.FingerJointEdgeCounterPart.positive"><code class="docutils literal notranslate"><span class="pre">FingerJointEdgeCounterPart.positive</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.FingerJointSettings"><code class="docutils literal notranslate"><span class="pre">FingerJointSettings</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.FingerJointSettings.absolute_params"><code class="docutils literal notranslate"><span class="pre">FingerJointSettings.absolute_params</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.FingerJointSettings.checkValues"><code class="docutils literal notranslate"><span class="pre">FingerJointSettings.checkValues()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.FingerJointSettings.edgeObjects"><code class="docutils literal notranslate"><span class="pre">FingerJointSettings.edgeObjects()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.FingerJointSettings.relative_params"><code class="docutils literal notranslate"><span class="pre">FingerJointSettings.relative_params</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.FlexEdge"><code class="docutils literal notranslate"><span class="pre">FlexEdge</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.FlexEdge.char"><code class="docutils literal notranslate"><span class="pre">FlexEdge.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.FlexEdge.description"><code class="docutils literal notranslate"><span class="pre">FlexEdge.description</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.FlexSettings"><code class="docutils literal notranslate"><span class="pre">FlexSettings</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.FlexSettings.absolute_params"><code class="docutils literal notranslate"><span class="pre">FlexSettings.absolute_params</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.FlexSettings.checkValues"><code class="docutils literal notranslate"><span class="pre">FlexSettings.checkValues()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.FlexSettings.relative_params"><code class="docutils literal notranslate"><span class="pre">FlexSettings.relative_params</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.GearSettings"><code class="docutils literal notranslate"><span class="pre">GearSettings</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.GearSettings.absolute_params"><code class="docutils literal notranslate"><span class="pre">GearSettings.absolute_params</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.GearSettings.relative_params"><code class="docutils literal notranslate"><span class="pre">GearSettings.relative_params</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.GripSettings"><code class="docutils literal notranslate"><span class="pre">GripSettings</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.GripSettings.absolute_params"><code class="docutils literal notranslate"><span class="pre">GripSettings.absolute_params</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.GripSettings.edgeObjects"><code class="docutils literal notranslate"><span class="pre">GripSettings.edgeObjects()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.GripSettings.relative_params"><code class="docutils literal notranslate"><span class="pre">GripSettings.relative_params</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.GrippingEdge"><code class="docutils literal notranslate"><span class="pre">GrippingEdge</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.GrippingEdge.bumps"><code class="docutils literal notranslate"><span class="pre">GrippingEdge.bumps()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.GrippingEdge.char"><code class="docutils literal notranslate"><span class="pre">GrippingEdge.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.GrippingEdge.description"><code class="docutils literal notranslate"><span class="pre">GrippingEdge.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.GrippingEdge.margin"><code class="docutils literal notranslate"><span class="pre">GrippingEdge.margin()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.GrippingEdge.wave"><code class="docutils literal notranslate"><span class="pre">GrippingEdge.wave()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.GroovedEdge"><code class="docutils literal notranslate"><span class="pre">GroovedEdge</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.GroovedEdge.char"><code class="docutils literal notranslate"><span class="pre">GroovedEdge.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.GroovedEdge.description"><code class="docutils literal notranslate"><span class="pre">GroovedEdge.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.GroovedEdge.inverse"><code class="docutils literal notranslate"><span class="pre">GroovedEdge.inverse</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.GroovedEdgeBase"><code class="docutils literal notranslate"><span class="pre">GroovedEdgeBase</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.GroovedEdgeBase.groove_arc"><code class="docutils literal notranslate"><span class="pre">GroovedEdgeBase.groove_arc()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.GroovedEdgeBase.groove_soft_arc"><code class="docutils literal notranslate"><span class="pre">GroovedEdgeBase.groove_soft_arc()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.GroovedEdgeBase.groove_triangle"><code class="docutils literal notranslate"><span class="pre">GroovedEdgeBase.groove_triangle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.GroovedEdgeBase.is_inverse"><code class="docutils literal notranslate"><span class="pre">GroovedEdgeBase.is_inverse()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.GroovedEdgeCounterPart"><code class="docutils literal notranslate"><span class="pre">GroovedEdgeCounterPart</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.GroovedEdgeCounterPart.char"><code class="docutils literal notranslate"><span class="pre">GroovedEdgeCounterPart.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.GroovedEdgeCounterPart.description"><code class="docutils literal notranslate"><span class="pre">GroovedEdgeCounterPart.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.GroovedEdgeCounterPart.inverse"><code class="docutils literal notranslate"><span class="pre">GroovedEdgeCounterPart.inverse</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.GroovedSettings"><code class="docutils literal notranslate"><span class="pre">GroovedSettings</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.GroovedSettings.PARAM_ARC"><code class="docutils literal notranslate"><span class="pre">GroovedSettings.PARAM_ARC</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.GroovedSettings.PARAM_FLAT"><code class="docutils literal notranslate"><span class="pre">GroovedSettings.PARAM_FLAT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.GroovedSettings.PARAM_SOFTARC"><code class="docutils literal notranslate"><span class="pre">GroovedSettings.PARAM_SOFTARC</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.GroovedSettings.PARAM_TRIANGLE"><code class="docutils literal notranslate"><span class="pre">GroovedSettings.PARAM_TRIANGLE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.GroovedSettings.absolute_params"><code class="docutils literal notranslate"><span class="pre">GroovedSettings.absolute_params</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.GroovedSettings.edgeObjects"><code class="docutils literal notranslate"><span class="pre">GroovedSettings.edgeObjects()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.HandleEdge"><code class="docutils literal notranslate"><span class="pre">HandleEdge</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.HandleEdge.char"><code class="docutils literal notranslate"><span class="pre">HandleEdge.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.HandleEdge.description"><code class="docutils literal notranslate"><span class="pre">HandleEdge.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.HandleEdge.extra_height"><code class="docutils literal notranslate"><span class="pre">HandleEdge.extra_height</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.HandleEdge.margin"><code class="docutils literal notranslate"><span class="pre">HandleEdge.margin()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.HandleEdgeSettings"><code class="docutils literal notranslate"><span class="pre">HandleEdgeSettings</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.HandleEdgeSettings.absolute_params"><code class="docutils literal notranslate"><span class="pre">HandleEdgeSettings.absolute_params</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.HandleEdgeSettings.edgeObjects"><code class="docutils literal notranslate"><span class="pre">HandleEdgeSettings.edgeObjects()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.HandleEdgeSettings.relative_params"><code class="docutils literal notranslate"><span class="pre">HandleEdgeSettings.relative_params</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.HandleHoleEdge"><code class="docutils literal notranslate"><span class="pre">HandleHoleEdge</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.HandleHoleEdge.char"><code class="docutils literal notranslate"><span class="pre">HandleHoleEdge.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.HandleHoleEdge.description"><code class="docutils literal notranslate"><span class="pre">HandleHoleEdge.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.HandleHoleEdge.extra_height"><code class="docutils literal notranslate"><span class="pre">HandleHoleEdge.extra_height</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.HandleHoleEdge.margin"><code class="docutils literal notranslate"><span class="pre">HandleHoleEdge.margin()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.Hinge"><code class="docutils literal notranslate"><span class="pre">Hinge</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.Hinge.char"><code class="docutils literal notranslate"><span class="pre">Hinge.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.Hinge.description"><code class="docutils literal notranslate"><span class="pre">Hinge.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.Hinge.flush"><code class="docutils literal notranslate"><span class="pre">Hinge.flush()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.Hinge.flushlen"><code class="docutils literal notranslate"><span class="pre">Hinge.flushlen()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.Hinge.margin"><code class="docutils literal notranslate"><span class="pre">Hinge.margin()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.Hinge.outset"><code class="docutils literal notranslate"><span class="pre">Hinge.outset()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.Hinge.outsetlen"><code class="docutils literal notranslate"><span class="pre">Hinge.outsetlen()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.HingePin"><code class="docutils literal notranslate"><span class="pre">HingePin</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.HingePin.char"><code class="docutils literal notranslate"><span class="pre">HingePin.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.HingePin.description"><code class="docutils literal notranslate"><span class="pre">HingePin.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.HingePin.endwidth"><code class="docutils literal notranslate"><span class="pre">HingePin.endwidth()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.HingePin.flush"><code class="docutils literal notranslate"><span class="pre">HingePin.flush()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.HingePin.flushlen"><code class="docutils literal notranslate"><span class="pre">HingePin.flushlen()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.HingePin.margin"><code class="docutils literal notranslate"><span class="pre">HingePin.margin()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.HingePin.outset"><code class="docutils literal notranslate"><span class="pre">HingePin.outset()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.HingePin.outsetlen"><code class="docutils literal notranslate"><span class="pre">HingePin.outsetlen()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.HingePin.startwidth"><code class="docutils literal notranslate"><span class="pre">HingePin.startwidth()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.HingeSettings"><code class="docutils literal notranslate"><span class="pre">HingeSettings</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.HingeSettings.absolute_params"><code class="docutils literal notranslate"><span class="pre">HingeSettings.absolute_params</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.HingeSettings.checkValues"><code class="docutils literal notranslate"><span class="pre">HingeSettings.checkValues()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.HingeSettings.edgeObjects"><code class="docutils literal notranslate"><span class="pre">HingeSettings.edgeObjects()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.HingeSettings.relative_params"><code class="docutils literal notranslate"><span class="pre">HingeSettings.relative_params</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.LidEdge"><code class="docutils literal notranslate"><span class="pre">LidEdge</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.LidEdge.char"><code class="docutils literal notranslate"><span class="pre">LidEdge.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.LidEdge.description"><code class="docutils literal notranslate"><span class="pre">LidEdge.description</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.LidHoleEdge"><code class="docutils literal notranslate"><span class="pre">LidHoleEdge</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.LidHoleEdge.char"><code class="docutils literal notranslate"><span class="pre">LidHoleEdge.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.LidHoleEdge.description"><code class="docutils literal notranslate"><span class="pre">LidHoleEdge.description</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.LidLeft"><code class="docutils literal notranslate"><span class="pre">LidLeft</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.LidLeft.char"><code class="docutils literal notranslate"><span class="pre">LidLeft.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.LidLeft.description"><code class="docutils literal notranslate"><span class="pre">LidLeft.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.LidLeft.rightside"><code class="docutils literal notranslate"><span class="pre">LidLeft.rightside</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.LidRight"><code class="docutils literal notranslate"><span class="pre">LidRight</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.LidRight.char"><code class="docutils literal notranslate"><span class="pre">LidRight.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.LidRight.description"><code class="docutils literal notranslate"><span class="pre">LidRight.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.LidRight.endwidth"><code class="docutils literal notranslate"><span class="pre">LidRight.endwidth()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.LidRight.margin"><code class="docutils literal notranslate"><span class="pre">LidRight.margin()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.LidRight.rightside"><code class="docutils literal notranslate"><span class="pre">LidRight.rightside</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.LidRight.startwidth"><code class="docutils literal notranslate"><span class="pre">LidRight.startwidth()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.LidSettings"><code class="docutils literal notranslate"><span class="pre">LidSettings</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.LidSettings.absolute_params"><code class="docutils literal notranslate"><span class="pre">LidSettings.absolute_params</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.LidSettings.edgeObjects"><code class="docutils literal notranslate"><span class="pre">LidSettings.edgeObjects()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.LidSettings.relative_params"><code class="docutils literal notranslate"><span class="pre">LidSettings.relative_params</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.LidSideLeft"><code class="docutils literal notranslate"><span class="pre">LidSideLeft</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.LidSideLeft.char"><code class="docutils literal notranslate"><span class="pre">LidSideLeft.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.LidSideLeft.description"><code class="docutils literal notranslate"><span class="pre">LidSideLeft.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.LidSideLeft.rightside"><code class="docutils literal notranslate"><span class="pre">LidSideLeft.rightside</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.LidSideRight"><code class="docutils literal notranslate"><span class="pre">LidSideRight</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.LidSideRight.char"><code class="docutils literal notranslate"><span class="pre">LidSideRight.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.LidSideRight.description"><code class="docutils literal notranslate"><span class="pre">LidSideRight.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.LidSideRight.endwidth"><code class="docutils literal notranslate"><span class="pre">LidSideRight.endwidth()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.LidSideRight.margin"><code class="docutils literal notranslate"><span class="pre">LidSideRight.margin()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.LidSideRight.rightside"><code class="docutils literal notranslate"><span class="pre">LidSideRight.rightside</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.LidSideRight.startwidth"><code class="docutils literal notranslate"><span class="pre">LidSideRight.startwidth()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.MountingEdge"><code class="docutils literal notranslate"><span class="pre">MountingEdge</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.MountingEdge.char"><code class="docutils literal notranslate"><span class="pre">MountingEdge.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.MountingEdge.description"><code class="docutils literal notranslate"><span class="pre">MountingEdge.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.MountingEdge.margin"><code class="docutils literal notranslate"><span class="pre">MountingEdge.margin()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.MountingEdge.startwidth"><code class="docutils literal notranslate"><span class="pre">MountingEdge.startwidth()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.MountingSettings"><code class="docutils literal notranslate"><span class="pre">MountingSettings</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.MountingSettings.PARAM_BACK"><code class="docutils literal notranslate"><span class="pre">MountingSettings.PARAM_BACK</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.MountingSettings.PARAM_EXT"><code class="docutils literal notranslate"><span class="pre">MountingSettings.PARAM_EXT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.MountingSettings.PARAM_FRONT"><code class="docutils literal notranslate"><span class="pre">MountingSettings.PARAM_FRONT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.MountingSettings.PARAM_IN"><code class="docutils literal notranslate"><span class="pre">MountingSettings.PARAM_IN</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.MountingSettings.PARAM_LEFT"><code class="docutils literal notranslate"><span class="pre">MountingSettings.PARAM_LEFT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.MountingSettings.PARAM_RIGHT"><code class="docutils literal notranslate"><span class="pre">MountingSettings.PARAM_RIGHT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.MountingSettings.PARAM_TAB"><code class="docutils literal notranslate"><span class="pre">MountingSettings.PARAM_TAB</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.MountingSettings.absolute_params"><code class="docutils literal notranslate"><span class="pre">MountingSettings.absolute_params</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.MountingSettings.edgeObjects"><code class="docutils literal notranslate"><span class="pre">MountingSettings.edgeObjects()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.OutSetEdge"><code class="docutils literal notranslate"><span class="pre">OutSetEdge</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.OutSetEdge.char"><code class="docutils literal notranslate"><span class="pre">OutSetEdge.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.OutSetEdge.description"><code class="docutils literal notranslate"><span class="pre">OutSetEdge.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.OutSetEdge.positive"><code class="docutils literal notranslate"><span class="pre">OutSetEdge.positive</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.OutSetEdge.startwidth"><code class="docutils literal notranslate"><span class="pre">OutSetEdge.startwidth()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.RackEdge"><code class="docutils literal notranslate"><span class="pre">RackEdge</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.RackEdge.char"><code class="docutils literal notranslate"><span class="pre">RackEdge.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.RackEdge.description"><code class="docutils literal notranslate"><span class="pre">RackEdge.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.RackEdge.margin"><code class="docutils literal notranslate"><span class="pre">RackEdge.margin()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.RoundedTriangleEdge"><code class="docutils literal notranslate"><span class="pre">RoundedTriangleEdge</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.RoundedTriangleEdge.char"><code class="docutils literal notranslate"><span class="pre">RoundedTriangleEdge.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.RoundedTriangleEdge.description"><code class="docutils literal notranslate"><span class="pre">RoundedTriangleEdge.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.RoundedTriangleEdge.margin"><code class="docutils literal notranslate"><span class="pre">RoundedTriangleEdge.margin()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.RoundedTriangleEdgeSettings"><code class="docutils literal notranslate"><span class="pre">RoundedTriangleEdgeSettings</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.RoundedTriangleEdgeSettings.absolute_params"><code class="docutils literal notranslate"><span class="pre">RoundedTriangleEdgeSettings.absolute_params</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.RoundedTriangleEdgeSettings.edgeObjects"><code class="docutils literal notranslate"><span class="pre">RoundedTriangleEdgeSettings.edgeObjects()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.RoundedTriangleEdgeSettings.relative_params"><code class="docutils literal notranslate"><span class="pre">RoundedTriangleEdgeSettings.relative_params</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.RoundedTriangleFingerHolesEdge"><code class="docutils literal notranslate"><span class="pre">RoundedTriangleFingerHolesEdge</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.RoundedTriangleFingerHolesEdge.char"><code class="docutils literal notranslate"><span class="pre">RoundedTriangleFingerHolesEdge.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.RoundedTriangleFingerHolesEdge.startwidth"><code class="docutils literal notranslate"><span class="pre">RoundedTriangleFingerHolesEdge.startwidth()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.Settings"><code class="docutils literal notranslate"><span class="pre">Settings</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.Settings.absolute_params"><code class="docutils literal notranslate"><span class="pre">Settings.absolute_params</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.Settings.checkValues"><code class="docutils literal notranslate"><span class="pre">Settings.checkValues()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.Settings.edgeObjects"><code class="docutils literal notranslate"><span class="pre">Settings.edgeObjects()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.Settings.parserArguments"><code class="docutils literal notranslate"><span class="pre">Settings.parserArguments()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.Settings.relative_params"><code class="docutils literal notranslate"><span class="pre">Settings.relative_params</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.Settings.setValues"><code class="docutils literal notranslate"><span class="pre">Settings.setValues()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.Slot"><code class="docutils literal notranslate"><span class="pre">Slot</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.Slot.description"><code class="docutils literal notranslate"><span class="pre">Slot.description</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.SlottedEdge"><code class="docutils literal notranslate"><span class="pre">SlottedEdge</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.SlottedEdge.description"><code class="docutils literal notranslate"><span class="pre">SlottedEdge.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.SlottedEdge.endwidth"><code class="docutils literal notranslate"><span class="pre">SlottedEdge.endwidth()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.SlottedEdge.margin"><code class="docutils literal notranslate"><span class="pre">SlottedEdge.margin()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.SlottedEdge.startwidth"><code class="docutils literal notranslate"><span class="pre">SlottedEdge.startwidth()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.StackableBaseEdge"><code class="docutils literal notranslate"><span class="pre">StackableBaseEdge</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.StackableBaseEdge.bottom"><code class="docutils literal notranslate"><span class="pre">StackableBaseEdge.bottom</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.StackableBaseEdge.char"><code class="docutils literal notranslate"><span class="pre">StackableBaseEdge.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.StackableBaseEdge.description"><code class="docutils literal notranslate"><span class="pre">StackableBaseEdge.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.StackableBaseEdge.margin"><code class="docutils literal notranslate"><span class="pre">StackableBaseEdge.margin()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.StackableBaseEdge.startwidth"><code class="docutils literal notranslate"><span class="pre">StackableBaseEdge.startwidth()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.StackableEdge"><code class="docutils literal notranslate"><span class="pre">StackableEdge</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.StackableEdge.char"><code class="docutils literal notranslate"><span class="pre">StackableEdge.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.StackableEdge.description"><code class="docutils literal notranslate"><span class="pre">StackableEdge.description</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.StackableEdgeTop"><code class="docutils literal notranslate"><span class="pre">StackableEdgeTop</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.StackableEdgeTop.bottom"><code class="docutils literal notranslate"><span class="pre">StackableEdgeTop.bottom</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.StackableEdgeTop.char"><code class="docutils literal notranslate"><span class="pre">StackableEdgeTop.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.StackableEdgeTop.description"><code class="docutils literal notranslate"><span class="pre">StackableEdgeTop.description</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.StackableFeet"><code class="docutils literal notranslate"><span class="pre">StackableFeet</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.StackableFeet.char"><code class="docutils literal notranslate"><span class="pre">StackableFeet.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.StackableFeet.description"><code class="docutils literal notranslate"><span class="pre">StackableFeet.description</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.StackableHoleEdgeTop"><code class="docutils literal notranslate"><span class="pre">StackableHoleEdgeTop</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.StackableHoleEdgeTop.bottom"><code class="docutils literal notranslate"><span class="pre">StackableHoleEdgeTop.bottom</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.StackableHoleEdgeTop.char"><code class="docutils literal notranslate"><span class="pre">StackableHoleEdgeTop.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.StackableHoleEdgeTop.description"><code class="docutils literal notranslate"><span class="pre">StackableHoleEdgeTop.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.StackableHoleEdgeTop.startwidth"><code class="docutils literal notranslate"><span class="pre">StackableHoleEdgeTop.startwidth()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.StackableSettings"><code class="docutils literal notranslate"><span class="pre">StackableSettings</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.StackableSettings.absolute_params"><code class="docutils literal notranslate"><span class="pre">StackableSettings.absolute_params</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.StackableSettings.checkValues"><code class="docutils literal notranslate"><span class="pre">StackableSettings.checkValues()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.StackableSettings.edgeObjects"><code class="docutils literal notranslate"><span class="pre">StackableSettings.edgeObjects()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.edges.StackableSettings.relative_params"><code class="docutils literal notranslate"><span class="pre">StackableSettings.relative_params</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.argparseSections"><code class="docutils literal notranslate"><span class="pre">argparseSections()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.edges.getDescriptions"><code class="docutils literal notranslate"><span class="pre">getDescriptions()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="boxes.html#module-boxes.formats">boxes.formats module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.formats.Formats"><code class="docutils literal notranslate"><span class="pre">Formats</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.formats.Formats.convert"><code class="docutils literal notranslate"><span class="pre">Formats.convert()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.formats.Formats.formats"><code class="docutils literal notranslate"><span class="pre">Formats.formats</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.formats.Formats.getFormats"><code class="docutils literal notranslate"><span class="pre">Formats.getFormats()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.formats.Formats.getSurface"><code class="docutils literal notranslate"><span class="pre">Formats.getSurface()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.formats.Formats.http_headers"><code class="docutils literal notranslate"><span class="pre">Formats.http_headers</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.formats.Formats.pstoedit_candidates"><code class="docutils literal notranslate"><span class="pre">Formats.pstoedit_candidates</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="boxes.html#module-boxes.gears">boxes.gears module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.gears.Gears"><code class="docutils literal notranslate"><span class="pre">Gears</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.gears.Gears.calc_circular_pitch"><code class="docutils literal notranslate"><span class="pre">Gears.calc_circular_pitch()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.gears.Gears.drawPoints"><code class="docutils literal notranslate"><span class="pre">Gears.drawPoints()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.gears.Gears.gearCarrier"><code class="docutils literal notranslate"><span class="pre">Gears.gearCarrier()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.gears.Gears.generate_spokes"><code class="docutils literal notranslate"><span class="pre">Gears.generate_spokes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.gears.Gears.sizes"><code class="docutils literal notranslate"><span class="pre">Gears.sizes()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.gears.OptionParser"><code class="docutils literal notranslate"><span class="pre">OptionParser</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.gears.OptionParser.add_option"><code class="docutils literal notranslate"><span class="pre">OptionParser.add_option()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.gears.OptionParser.types"><code class="docutils literal notranslate"><span class="pre">OptionParser.types</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.gears.gear_calculations"><code class="docutils literal notranslate"><span class="pre">gear_calculations()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.gears.generate_rack_points"><code class="docutils literal notranslate"><span class="pre">generate_rack_points()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.gears.generate_spur_points"><code class="docutils literal notranslate"><span class="pre">generate_spur_points()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.gears.have_undercut"><code class="docutils literal notranslate"><span class="pre">have_undercut()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.gears.inkbool"><code class="docutils literal notranslate"><span class="pre">inkbool()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.gears.involute_intersect_angle"><code class="docutils literal notranslate"><span class="pre">involute_intersect_angle()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.gears.linspace"><code class="docutils literal notranslate"><span class="pre">linspace()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.gears.point_on_circle"><code class="docutils literal notranslate"><span class="pre">point_on_circle()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.gears.undercut_max_k"><code class="docutils literal notranslate"><span class="pre">undercut_max_k()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.gears.undercut_min_angle"><code class="docutils literal notranslate"><span class="pre">undercut_min_angle()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.gears.undercut_min_teeth"><code class="docutils literal notranslate"><span class="pre">undercut_min_teeth()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="boxes.html#module-boxes.lids">boxes.lids module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="boxes.html#boxes-mounts-module">boxes.mounts module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="boxes.html#module-boxes.parts">boxes.parts module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.parts.Parts"><code class="docutils literal notranslate"><span class="pre">Parts</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.parts.Parts.concaveKnob"><code class="docutils literal notranslate"><span class="pre">Parts.concaveKnob()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.parts.Parts.disc"><code class="docutils literal notranslate"><span class="pre">Parts.disc()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.parts.Parts.ringSegment"><code class="docutils literal notranslate"><span class="pre">Parts.ringSegment()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.parts.Parts.waivyKnob"><code class="docutils literal notranslate"><span class="pre">Parts.waivyKnob()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.parts.arcOnCircle"><code class="docutils literal notranslate"><span class="pre">arcOnCircle()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="boxes.html#module-boxes.pulley">boxes.pulley module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.pulley.Pulley"><code class="docutils literal notranslate"><span class="pre">Pulley</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.pulley.Pulley.diameter"><code class="docutils literal notranslate"><span class="pre">Pulley.diameter()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.pulley.Pulley.drawPoints"><code class="docutils literal notranslate"><span class="pre">Pulley.drawPoints()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.pulley.Pulley.getProfiles"><code class="docutils literal notranslate"><span class="pre">Pulley.getProfiles()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.pulley.Pulley.profile_data"><code class="docutils literal notranslate"><span class="pre">Pulley.profile_data</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.pulley.Pulley.spacing"><code class="docutils literal notranslate"><span class="pre">Pulley.spacing</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.pulley.Pulley.teeth"><code class="docutils literal notranslate"><span class="pre">Pulley.teeth</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.pulley.mirrorx"><code class="docutils literal notranslate"><span class="pre">mirrorx()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.pulley.tooth_spaceing_curvefit"><code class="docutils literal notranslate"><span class="pre">tooth_spaceing_curvefit()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.pulley.tooth_spacing"><code class="docutils literal notranslate"><span class="pre">tooth_spacing()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="boxes.html#module-boxes.robot">boxes.robot module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.robot.RobotArg"><code class="docutils literal notranslate"><span class="pre">RobotArg</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.robot.RobotArg.choices"><code class="docutils literal notranslate"><span class="pre">RobotArg.choices()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.robot.RobotArg.html"><code class="docutils literal notranslate"><span class="pre">RobotArg.html()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.robot.RobotArmMM"><code class="docutils literal notranslate"><span class="pre">RobotArmMM</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.robot.RobotArmMm"><code class="docutils literal notranslate"><span class="pre">RobotArmMm</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.robot.RobotArmMu"><code class="docutils literal notranslate"><span class="pre">RobotArmMu</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.robot.RobotArmUU"><code class="docutils literal notranslate"><span class="pre">RobotArmUU</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.robot.RobotArmUu"><code class="docutils literal notranslate"><span class="pre">RobotArmUu</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="boxes.html#module-boxes.servos">boxes.servos module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.servos.EyeEdge"><code class="docutils literal notranslate"><span class="pre">EyeEdge</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.servos.EyeEdge.char"><code class="docutils literal notranslate"><span class="pre">EyeEdge.char</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.servos.EyeEdge.margin"><code class="docutils literal notranslate"><span class="pre">EyeEdge.margin()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.servos.EyeEdge.startwidth"><code class="docutils literal notranslate"><span class="pre">EyeEdge.startwidth()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.servos.Servo"><code class="docutils literal notranslate"><span class="pre">Servo</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.servos.Servo.edges"><code class="docutils literal notranslate"><span class="pre">Servo.edges()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.servos.Servo9g"><code class="docutils literal notranslate"><span class="pre">Servo9g</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.servos.Servo9g.axle_pos"><code class="docutils literal notranslate"><span class="pre">Servo9g.axle_pos</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.servos.Servo9g.bottom"><code class="docutils literal notranslate"><span class="pre">Servo9g.bottom()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.servos.Servo9g.front"><code class="docutils literal notranslate"><span class="pre">Servo9g.front()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.servos.Servo9g.height"><code class="docutils literal notranslate"><span class="pre">Servo9g.height</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.servos.Servo9g.hinge_depth"><code class="docutils literal notranslate"><span class="pre">Servo9g.hinge_depth()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.servos.Servo9g.hinge_width"><code class="docutils literal notranslate"><span class="pre">Servo9g.hinge_width()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.servos.Servo9g.length"><code class="docutils literal notranslate"><span class="pre">Servo9g.length</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.servos.Servo9g.servo_axle"><code class="docutils literal notranslate"><span class="pre">Servo9g.servo_axle</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.servos.Servo9g.top"><code class="docutils literal notranslate"><span class="pre">Servo9g.top()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.servos.Servo9g.width"><code class="docutils literal notranslate"><span class="pre">Servo9g.width</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.servos.Servo9gt"><code class="docutils literal notranslate"><span class="pre">Servo9gt</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.servos.Servo9gt.bottom"><code class="docutils literal notranslate"><span class="pre">Servo9gt.bottom()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.servos.Servo9gt.front"><code class="docutils literal notranslate"><span class="pre">Servo9gt.front()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.servos.Servo9gt.height"><code class="docutils literal notranslate"><span class="pre">Servo9gt.height</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.servos.Servo9gt.top"><code class="docutils literal notranslate"><span class="pre">Servo9gt.top()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.servos.ServoArg"><code class="docutils literal notranslate"><span class="pre">ServoArg</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.servos.ServoArg.choices"><code class="docutils literal notranslate"><span class="pre">ServoArg.choices()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.servos.ServoArg.html"><code class="docutils literal notranslate"><span class="pre">ServoArg.html()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.servos.buildEdges"><code class="docutils literal notranslate"><span class="pre">buildEdges()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="boxes.html#module-boxes.svgutil">boxes.svgutil module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.svgutil.getSizeInMM"><code class="docutils literal notranslate"><span class="pre">getSizeInMM()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.svgutil.getViewBox"><code class="docutils literal notranslate"><span class="pre">getViewBox()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.svgutil.svgMerge"><code class="docutils literal notranslate"><span class="pre">svgMerge()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.svgutil.ticksPerMM"><code class="docutils literal notranslate"><span class="pre">ticksPerMM()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="boxes.html#module-boxes.vectors">boxes.vectors module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.vectors.circlepoint"><code class="docutils literal notranslate"><span class="pre">circlepoint()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.vectors.dotproduct"><code class="docutils literal notranslate"><span class="pre">dotproduct()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.vectors.kerf"><code class="docutils literal notranslate"><span class="pre">kerf()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.vectors.mmul"><code class="docutils literal notranslate"><span class="pre">mmul()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.vectors.normalize"><code class="docutils literal notranslate"><span class="pre">normalize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.vectors.rotm"><code class="docutils literal notranslate"><span class="pre">rotm()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.vectors.tangent"><code class="docutils literal notranslate"><span class="pre">tangent()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.vectors.vadd"><code class="docutils literal notranslate"><span class="pre">vadd()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.vectors.vclip"><code class="docutils literal notranslate"><span class="pre">vclip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.vectors.vdiff"><code class="docutils literal notranslate"><span class="pre">vdiff()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.vectors.vlength"><code class="docutils literal notranslate"><span class="pre">vlength()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.vectors.vorthogonal"><code class="docutils literal notranslate"><span class="pre">vorthogonal()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.vectors.vscalmul"><code class="docutils literal notranslate"><span class="pre">vscalmul()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.vectors.vtransl"><code class="docutils literal notranslate"><span class="pre">vtransl()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="boxes.html#module-boxes">Module contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.ArgparseEdgeType"><code class="docutils literal notranslate"><span class="pre">ArgparseEdgeType</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.ArgparseEdgeType.edges"><code class="docutils literal notranslate"><span class="pre">ArgparseEdgeType.edges</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.ArgparseEdgeType.html"><code class="docutils literal notranslate"><span class="pre">ArgparseEdgeType.html()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.ArgparseEdgeType.inx"><code class="docutils literal notranslate"><span class="pre">ArgparseEdgeType.inx()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.ArgparseEdgeType.names"><code class="docutils literal notranslate"><span class="pre">ArgparseEdgeType.names</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.BoolArg"><code class="docutils literal notranslate"><span class="pre">BoolArg</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.BoolArg.html"><code class="docutils literal notranslate"><span class="pre">BoolArg.html()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.Boxes"><code class="docutils literal notranslate"><span class="pre">Boxes</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.NEMA"><code class="docutils literal notranslate"><span class="pre">Boxes.NEMA()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.TX"><code class="docutils literal notranslate"><span class="pre">Boxes.TX()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.addPart"><code class="docutils literal notranslate"><span class="pre">Boxes.addPart()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.addParts"><code class="docutils literal notranslate"><span class="pre">Boxes.addParts()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.addSettingsArgs"><code class="docutils literal notranslate"><span class="pre">Boxes.addSettingsArgs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.adjustSize"><code class="docutils literal notranslate"><span class="pre">Boxes.adjustSize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.bedBoltHole"><code class="docutils literal notranslate"><span class="pre">Boxes.bedBoltHole()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.buildArgParser"><code class="docutils literal notranslate"><span class="pre">Boxes.buildArgParser()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.cc"><code class="docutils literal notranslate"><span class="pre">Boxes.cc()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.circle"><code class="docutils literal notranslate"><span class="pre">Boxes.circle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.close"><code class="docutils literal notranslate"><span class="pre">Boxes.close()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.corner"><code class="docutils literal notranslate"><span class="pre">Boxes.corner()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.curveTo"><code class="docutils literal notranslate"><span class="pre">Boxes.curveTo()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.dHole"><code class="docutils literal notranslate"><span class="pre">Boxes.dHole()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.description"><code class="docutils literal notranslate"><span class="pre">Boxes.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.edge"><code class="docutils literal notranslate"><span class="pre">Boxes.edge()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.edgeCorner"><code class="docutils literal notranslate"><span class="pre">Boxes.edgeCorner()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.fillHoles"><code class="docutils literal notranslate"><span class="pre">Boxes.fillHoles()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.fingerHoleRectangle"><code class="docutils literal notranslate"><span class="pre">Boxes.fingerHoleRectangle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.flangedWall"><code class="docutils literal notranslate"><span class="pre">Boxes.flangedWall()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.flatHole"><code class="docutils literal notranslate"><span class="pre">Boxes.flatHole()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.flex2D"><code class="docutils literal notranslate"><span class="pre">Boxes.flex2D()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.getEntry"><code class="docutils literal notranslate"><span class="pre">Boxes.getEntry()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.grip"><code class="docutils literal notranslate"><span class="pre">Boxes.grip()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.handle"><code class="docutils literal notranslate"><span class="pre">Boxes.handle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.hexHolesCircle"><code class="docutils literal notranslate"><span class="pre">Boxes.hexHolesCircle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.hexHolesHex"><code class="docutils literal notranslate"><span class="pre">Boxes.hexHolesHex()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.hexHolesPlate"><code class="docutils literal notranslate"><span class="pre">Boxes.hexHolesPlate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.hexHolesRectangle"><code class="docutils literal notranslate"><span class="pre">Boxes.hexHolesRectangle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.hole"><code class="docutils literal notranslate"><span class="pre">Boxes.hole()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.latch"><code class="docutils literal notranslate"><span class="pre">Boxes.latch()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.mirrorX"><code class="docutils literal notranslate"><span class="pre">Boxes.mirrorX()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.mirrorY"><code class="docutils literal notranslate"><span class="pre">Boxes.mirrorY()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.mountingHole"><code class="docutils literal notranslate"><span class="pre">Boxes.mountingHole()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.move"><code class="docutils literal notranslate"><span class="pre">Boxes.move()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.moveArc"><code class="docutils literal notranslate"><span class="pre">Boxes.moveArc()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.moveTo"><code class="docutils literal notranslate"><span class="pre">Boxes.moveTo()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.nema_sizes"><code class="docutils literal notranslate"><span class="pre">Boxes.nema_sizes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.open"><code class="docutils literal notranslate"><span class="pre">Boxes.open()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.parseArgs"><code class="docutils literal notranslate"><span class="pre">Boxes.parseArgs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.partsMatrix"><code class="docutils literal notranslate"><span class="pre">Boxes.partsMatrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.polygonWall"><code class="docutils literal notranslate"><span class="pre">Boxes.polygonWall()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.polygonWalls"><code class="docutils literal notranslate"><span class="pre">Boxes.polygonWalls()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.polyline"><code class="docutils literal notranslate"><span class="pre">Boxes.polyline()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.rectangularHole"><code class="docutils literal notranslate"><span class="pre">Boxes.rectangularHole()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.rectangularTriangle"><code class="docutils literal notranslate"><span class="pre">Boxes.rectangularTriangle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.rectangularWall"><code class="docutils literal notranslate"><span class="pre">Boxes.rectangularWall()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.regularPolygon"><code class="docutils literal notranslate"><span class="pre">Boxes.regularPolygon()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.regularPolygonAt"><code class="docutils literal notranslate"><span class="pre">Boxes.regularPolygonAt()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.regularPolygonHole"><code class="docutils literal notranslate"><span class="pre">Boxes.regularPolygonHole()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.regularPolygonWall"><code class="docutils literal notranslate"><span class="pre">Boxes.regularPolygonWall()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.render"><code class="docutils literal notranslate"><span class="pre">Boxes.render()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.roundedPlate"><code class="docutils literal notranslate"><span class="pre">Boxes.roundedPlate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.saved_context"><code class="docutils literal notranslate"><span class="pre">Boxes.saved_context()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.set_font"><code class="docutils literal notranslate"><span class="pre">Boxes.set_font()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.set_source_color"><code class="docutils literal notranslate"><span class="pre">Boxes.set_source_color()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.showBorderPoly"><code class="docutils literal notranslate"><span class="pre">Boxes.showBorderPoly()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.step"><code class="docutils literal notranslate"><span class="pre">Boxes.step()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.surroundingWall"><code class="docutils literal notranslate"><span class="pre">Boxes.surroundingWall()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.surroundingWallPiece"><code class="docutils literal notranslate"><span class="pre">Boxes.surroundingWallPiece()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.text"><code class="docutils literal notranslate"><span class="pre">Boxes.text()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.trapezoidSideWall"><code class="docutils literal notranslate"><span class="pre">Boxes.trapezoidSideWall()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.trapezoidWall"><code class="docutils literal notranslate"><span class="pre">Boxes.trapezoidWall()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.tx_sizes"><code class="docutils literal notranslate"><span class="pre">Boxes.tx_sizes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.ui_group"><code class="docutils literal notranslate"><span class="pre">Boxes.ui_group</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.Boxes.webinterface"><code class="docutils literal notranslate"><span class="pre">Boxes.webinterface</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.HexHolesSettings"><code class="docutils literal notranslate"><span class="pre">HexHolesSettings</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.HexHolesSettings.absolute_params"><code class="docutils literal notranslate"><span class="pre">HexHolesSettings.absolute_params</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.HexHolesSettings.relative_params"><code class="docutils literal notranslate"><span class="pre">HexHolesSettings.relative_params</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.NutHole"><code class="docutils literal notranslate"><span class="pre">NutHole</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.NutHole.sizes"><code class="docutils literal notranslate"><span class="pre">NutHole.sizes</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.argparseSections"><code class="docutils literal notranslate"><span class="pre">argparseSections()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.dist"><code class="docutils literal notranslate"><span class="pre">dist()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.fillHolesSettings"><code class="docutils literal notranslate"><span class="pre">fillHolesSettings</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boxes.html#boxes.fillHolesSettings.absolute_params"><code class="docutils literal notranslate"><span class="pre">fillHolesSettings.absolute_params</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.holeCol"><code class="docutils literal notranslate"><span class="pre">holeCol()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="boxes.html#boxes.restore"><code class="docutils literal notranslate"><span class="pre">restore()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/boxes-logo.svg" alt="Logo"/>
+            </a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/modules.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">boxes.py 0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">boxes</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, Florian Festi.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+  </body>
+</html>
