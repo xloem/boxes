@@ -46,6 +46,7 @@ from math import pi, cos, sin, tan, radians, degrees, ceil, asin, acos, sqrt
 two_pi = 2 * pi
 import argparse
 from boxes.vectors import kerf, vdiff, vlength
+from boxes.Color import Color
 
 __version__ = '0.9'
 
@@ -390,6 +391,15 @@ class Gears():
                                      dest="undercut_alert", default=False,
                                      help="Let the user confirm a warning dialog if undercut occurs. This dialog also shows helpful hints against undercut")
 
+        self.OptionParser.add_option("", "--slot_width",
+                                     action="store", type="float",
+                                     dest="slot_width", default=0.5,
+                                     help="Width of tightening slot with bed bolt (in mm).")
+        self.OptionParser.add_option("", "--slot_length",
+                                     action="store", type="float",
+                                     dest="slot_length", default=4,
+                                     help="Length of tightening slot with bed bolt (in mm).")
+
     def drawPoints(self, lines, kerfdir=1, close=True):
 
         if not lines:
@@ -596,6 +606,9 @@ class Gears():
         centercross = self.options.centercross # draw center or not (boolean)
         pitchcircle = self.options.pitchcircle # draw pitch circle or not (boolean)
 
+        slot_width = self.options.slot_width
+        slot_length = self.options.slot_length
+
         # Accuracy of teeth curves
         accuracy_involute = 20 # Number of points of the involute curve
         accuracy_circular = 9  # Number of points on circular parts
@@ -666,6 +679,20 @@ class Gears():
         if not teeth_only:
             self.boxes.moveTo(width/2, height/2)
         self.boxes.cc(callback, None, 0, 0)
+        if self.boxes.bolts:
+            d, d_nut, h_nut, l, l1 = self.boxes.bedBoltSettings
+            boltSettings = (d, d_nut*2/3**.5, h_nut, l/2, l/2-h_nut)
+            nutSettings = (d, d_nut, h_nut, l/2, l/2-h_nut)
+            self.boxes.ctx.stroke()
+            with self.boxes.saved_context():
+                self.boxes.set_source_color(Color.INNER_CUT)
+                self.boxes.moveTo(-slot_width/2 - self.boxes.burn, 0, 90)
+                self.boxes.bedBoltHole(slot_length + d, bedBoltSettings = boltSettings, bolt_position = 1.0, far_nut_play = slot_width/2)
+                self.boxes.corner(-90)
+                self.boxes.edge(slot_width)
+                self.boxes.corner(-90)
+                self.boxes.bedBoltHole(slot_length + d, bedBoltSettings = nutSettings, bolt_position = 0.0, near_nut_play = slot_width/2)
+                self.boxes.ctx.stroke()
         self.drawPoints(points)
         # Spokes
         if not teeth_only and not self.options.internal_ring:  # only draw internals if spur gear

@@ -923,7 +923,7 @@ class Boxes:
                 else:
                     self.edge(arg)
 
-    def bedBoltHole(self, length, bedBoltSettings=None, tabs=0):
+    def bedBoltHole(self, length, bedBoltSettings=None, tabs=0, bolt_position=0.5, near_nut_play=0, far_nut_play=0):
         """
         Draw an edge with slot for a bed bolt
 
@@ -932,13 +932,13 @@ class Boxes:
 
         """
         d, d_nut, h_nut, l, l1 = bedBoltSettings or self.bedBoltSettings
-        self.edge((length - d) / 2.0, tabs=tabs//2)
+        self.edge((length - d) * bolt_position, tabs=tabs//2)
         self.corner(90)
-        self.edge(l1)
+        self.edge(l1 - near_nut_play)
         self.corner(90)
         self.edge((d_nut - d) / 2.0)
         self.corner(-90)
-        self.edge(h_nut)
+        self.edge(h_nut + near_nut_play)
         self.corner(-90)
         self.edge((d_nut - d) / 2.0)
         self.corner(90)
@@ -950,13 +950,13 @@ class Boxes:
         self.corner(90)
         self.edge((d_nut - d) / 2.0)
         self.corner(-90)
-        self.edge(h_nut)
+        self.edge(h_nut + far_nut_play)
         self.corner(-90)
         self.edge((d_nut - d) / 2.0)
         self.corner(90)
-        self.edge(l1)
+        self.edge(l1 - far_nut_play)
         self.corner(90)
-        self.edge((length - d) / 2.0, tabs=tabs-(tabs//2))
+        self.edge((length - d) * (1 - bolt_position), tabs=tabs-(tabs//2))
 
     def edgeCorner(self, edge1, edge2, angle=90):
         """Make a corner between two Edges. Take width of edges into account"""

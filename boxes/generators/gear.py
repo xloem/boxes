@@ -53,6 +53,10 @@ class Gears(Boxes):
             "--profile_shift",  action="store", type=float, default=20,
             help="in precent of the modulus")
 
+        self.argparser.add_argument(
+            "--slot",  action="store", type=float, default=0.5,
+            help="Width of tightening slot with bed bolt.")
+
     def render(self):
         # adjust to the variables you want in the local scope
         t = self.thickness
@@ -67,6 +71,7 @@ class Gears(Boxes):
 
         self.gears(teeth=self.teeth2, dimension=self.modulus,
                    angle=self.pressure_angle, profile_shift=self.profile_shift,
+                   slot_width=self.slot, slot_length=max(self.shaft2, self.bedBoltSettings[1]-self.bedBoltSettings[0])/2,
                    callback=lambda:self.dHole(0, 0, d=self.shaft2,
                                               rel_w=self.dpercentage2/100.),
                    move="up")
@@ -76,6 +81,7 @@ class Gears(Boxes):
 
         self.gears(teeth=self.teeth1, dimension=self.modulus,
                    angle=self.pressure_angle, profile_shift=self.profile_shift,
+                   slot_width=self.slot, slot_length=max(self.shaft1, self.bedBoltSettings[1]-self.bedBoltSettings[0])/2,
                    callback=lambda:self.dHole(0, 0, d=self.shaft1,
                                               rel_w=self.dpercentage1/100.),
                    move="up")
