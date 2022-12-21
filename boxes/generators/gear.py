@@ -61,6 +61,9 @@ class Gears(Boxes):
         # adjust to the variables you want in the local scope
         t = self.thickness
 
+        #             half the total bolt length                                            minus the nut or head     minus the slot   plus the distance to the edge of the nut
+        slot_length = (self.bedBoltSettings[-2]+self.thickness+self.bedBoltSettings[2])/2 - self.bedBoltSettings[2] - self.slot/2 + (self.bedBoltSettings[1] - self.bedBoltSettings[0])/2
+
         self.teeth1 = max(2, self.teeth1)
         self.teeth2 = max(2, self.teeth2)
 
@@ -71,7 +74,7 @@ class Gears(Boxes):
 
         self.gears(teeth=self.teeth2, dimension=self.modulus,
                    angle=self.pressure_angle, profile_shift=self.profile_shift,
-                   slot_width=self.slot, slot_length=max(self.shaft2, self.bedBoltSettings[1]-self.bedBoltSettings[0])/2,
+                   slot_width=self.slot, slot_length=slot_length+self.shaft2/2,
                    callback=lambda:self.dHole(0, 0, d=self.shaft2,
                                               rel_w=self.dpercentage2/100.),
                    move="up")
@@ -81,7 +84,7 @@ class Gears(Boxes):
 
         self.gears(teeth=self.teeth1, dimension=self.modulus,
                    angle=self.pressure_angle, profile_shift=self.profile_shift,
-                   slot_width=self.slot, slot_length=max(self.shaft1, self.bedBoltSettings[1]-self.bedBoltSettings[0])/2,
+                   slot_width=self.slot, slot_length=slot_length+self.shaft1/2,
                    callback=lambda:self.dHole(0, 0, d=self.shaft1,
                                               rel_w=self.dpercentage1/100.),
                    move="up")

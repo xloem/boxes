@@ -681,12 +681,13 @@ class Gears():
         self.boxes.cc(callback, None, 0, 0)
         if self.boxes.bolts:
             d, d_nut, h_nut, l, l1 = self.boxes.bedBoltSettings
-            boltSettings = (d, d_nut*2/3**.5, h_nut, l/2, l/2-h_nut)
-            nutSettings = (d, d_nut, h_nut, l/2, l/2-h_nut)
+            l2 = (l + self.boxes.thickness + h_nut)/2
+            boltSettings = (d, d_nut*2/3**.5, h_nut, l2, l2-h_nut)
+            nutSettings = (d, d_nut, h_nut, l2, l2-h_nut)
             self.boxes.ctx.stroke()
             with self.boxes.saved_context():
                 self.boxes.set_source_color(Color.INNER_CUT)
-                self.boxes.moveTo(-slot_width/2 - self.boxes.burn, 0, 90)
+                self.boxes.moveTo(-(slot_width/2 - self.boxes.burn), 0, 90)
                 self.boxes.bedBoltHole(slot_length + d, bedBoltSettings = boltSettings, bolt_position = 1.0, far_nut_play = slot_width/2)
                 self.boxes.corner(-90)
                 self.boxes.edge(slot_width)
@@ -695,7 +696,7 @@ class Gears():
                 self.boxes.ctx.stroke()
         self.drawPoints(points)
         # Spokes
-        if not teeth_only and not self.options.internal_ring:  # only draw internals if spur gear
+        if not self.boxes.bolts and not teeth_only and not self.options.internal_ring:  # only draw internals if spur gear
             msg = self.generate_spokes(root_radius, spoke_width, spoke_count, mount_radius, mount_hole,
                                                     unit_factor, self.options.units)
             warnings.extend(msg)
