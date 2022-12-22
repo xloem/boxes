@@ -55,14 +55,29 @@ class Gears(Boxes):
 
         self.argparser.add_argument(
             "--slot",  action="store", type=float, default=0.5,
-            help="Width of tightening slot with bed bolt.")
+            help="Width of bed bolt set slot (in mm).")
+
+        self.argparser.add_argument(
+            "--slot-length", action="store", type=float, default=None,
+            help="Length of bed bolt set slot (in mm).")
 
     def render(self):
         # adjust to the variables you want in the local scope
         t = self.thickness
 
-        #             half the total bolt length                                            minus the nut or head     minus the slot   plus the distance to the edge of the nut
-        slot_length = (self.bedBoltSettings[-2]+self.thickness+self.bedBoltSettings[2])/2 - self.bedBoltSettings[2] - self.slot/2 + (self.bedBoltSettings[1] - self.bedBoltSettings[0])/2
+        if self.slot_length:
+            slot_length = self.slot_length
+        else:
+            slot_length = (
+                    # half the total bolt length
+                    (self.bedBoltSettings[-2]+t+self.bedBoltSettings[2])/2
+                    # minus the nut or head
+                    - self.bedBoltSettings[2]
+                    # minus the slot
+                    - self.slot/2
+                    # plus the distance to the edge of the nut
+                    + (self.bedBoltSettings[1] - self.bedBoltSettings[0])/2
+                )
 
         self.teeth1 = max(2, self.teeth1)
         self.teeth2 = max(2, self.teeth2)
